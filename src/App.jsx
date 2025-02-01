@@ -17,6 +17,11 @@ import ContactPage from './page/Contact/ContactPage'
 import About_Politics from './page/About/About_Politics'
 import Testimonials from './page/Testinomial/Testinomail'
 import AboutPriyanka from './page/About/About-Priyanka'
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
 const App = () => {
   const [showSplash, setShowSplash] = useState(true); // Control splash screen visibility
 

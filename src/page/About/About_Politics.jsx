@@ -7,6 +7,8 @@ import BjpCTA from './BJPCTA';
 import ImportantInfo from './SocialWork/Info';
 import CommissionActivities from './SocialWork/CommisionActivies';
 import Ayog from './SocialWork/Ayog';
+import SocialGallery from './SocialWork/Gallery';
+import WomenSocialLeaderShip from './SocialWork/WomenSocailLeaderShip';
 
 const About_Politics = () => {
     const breadcrumbItems = [
@@ -21,7 +23,10 @@ const About_Politics = () => {
                  <BjpAbout/>
                  <DrPriyankaMauryaCareer/>
                  <Ayog/>
+                 <SocialGallery/>
+                 <WomenSocialLeaderShip/>
                  <CommissionActivities/>
+                 
                  {/* <BjpCTA/> */}
             </div>
         </section>

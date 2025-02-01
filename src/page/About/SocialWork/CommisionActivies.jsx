@@ -21,7 +21,7 @@ const CommissionActivities = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-12 md:py-14 lg:py-16">
+    <section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-white">
     <div className="">
       <h1 className="text-2xl font-bold text-center text-purple-700 mb-4">Activities of the Commission</h1>
       <div className="max-w-4xl mx-auto bg-white p-6 shadow-lg rounded-lg">

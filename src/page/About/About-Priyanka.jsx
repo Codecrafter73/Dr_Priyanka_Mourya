@@ -51,30 +51,7 @@ const AboutPriyanka = () => {
                             <li>RedFM Achievers Award (2021)</li>
                             <li>Corona Warrior Award (2020)</li>
                         </ul>
-                        {/* <h2 className="text-xl font-semibold mt-4">Personal Information</h2>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Born:</strong> 27 August, 1988</p>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Nationality:</strong> Indian</p>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Profession:</strong> Homeopathic Doctor, Social Worker, Politician</p>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Education:</strong> Bachelor of Homeopathic Medicine and Surgery</p>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Alma Mater:</strong> Jiwaji University, Gwalior</p>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Political Affiliations:</strong></p>
-    <ul className="text-lg text-gray-600 leading-relaxed list-disc pl-5">
-        <li>Indian National Congress (2020–2022)</li>
-        <li>Bharatiya Janata Party (2022–present)</li>
-    </ul>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Spouse:</strong> Abhishek Kumar</p> */}
-                        {/* <h2 className="text-xl font-semibold mt-4">Clinic Hours</h2>
-    <ul className="text-lg text-gray-600 leading-relaxed list-disc pl-5">
-        <li>Monday: 10:30 - 13:00, 18:00 - 20:00</li>
-        <li>Tuesday: 10:30 - 13:00, 18:00 - 20:00</li>
-        <li>Wednesday: 10:30 - 13:00, 16:00 - 18:00</li>
-        <li>Thursday: CLOSED</li>
-        <li>Friday: 10:30 - 13:00, 16:00 - 20:00</li>
-        <li>Saturday: 10:00 - 13:00, 17:00 - 20:00</li>
-        <li>Sunday: 10:30 - 13:00, 18:00 - 20:00</li>
-    </ul> */}
-                        {/* <h2 className="text-xl font-semibold mt-4">Services</h2>
-    <p className="text-lg text-gray-600 leading-relaxed text-justify">In-store collection and homeopathic clinic consultations available.</p> */}
+
                         <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Contact:</strong> 7667238292</p>
                     </div>
 
@@ -87,19 +64,14 @@ const AboutPriyanka = () => {
                             <img src={shape2} alt="Decorative shape 2" className='w-[26%] h-auto hidden lg:block absolute bottom-[-92px] right-[140px]' />
                         </div>
                     </div>
-                    {/* <div className='max-w-[28rem] w-full aspect-w-4 aspect-h-3 relative sm:mb-5 md:mb-0 sm:mr-16 md:mr-0 lg:mr-20 ' data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                        <img src={doctor} className='w-full h-full drop-shadow-[-3px_4px_4px_#808080] relative z-[10]' alt="Main visual" />
-                        <img src={doctor1} alt="Supplementary image" className='w-[60%] z-[20] h-auto hidden lg:block absolute drop-shadow-[0px_5px_6px_#808080] bottom-[-100px] right-[-100px]' />
-                        <img src={shape1} alt="Decorative shape 1" className='w-[28%] h-auto hidden lg:block absolute top-[85px] right-[-80px]' />
-                        <img src={shape2} alt="Decorative shape 2" className='w-[26%] h-auto hidden lg:block absolute bottom-[-92px] right-[140px]' />
-                    </div> */}
+      
                 </div>
             </div>
-              <CarrerPriyanka/>
-              <CallToAction/>
-             <ServiceHome/>
-             <FeedbackComponent/>
-              <AboutFaq/>
+            <CarrerPriyanka />
+            <CallToAction />
+            <ServiceHome />
+            <FeedbackComponent />
+            <AboutFaq />
         </section>
     );
 }

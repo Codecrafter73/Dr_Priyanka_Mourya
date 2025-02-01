@@ -74,6 +74,7 @@ const MainComponent = () => {
                 <ComponentOne />
                 <ComponentTwo />
                 <ComponentThree />
+                
             </div>
         </section>
     );
