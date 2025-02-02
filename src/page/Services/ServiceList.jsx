@@ -20,55 +20,65 @@ const services = [
     {
         "image1": img1,
         "name": "Obs & Gynecology",
-        "para": "Comprehensive care for women's reproductive health and pregnancy issues."
+        "para": "Comprehensive care for women's reproductive health and pregnancy issues.",
+        "serviceUrl": "/service/obs-gynecology"
     },
     {
         "image1": img2,
         "name": "Nervous Disorder",
-        "para": "Treatment for nervous system disorders like headaches, epilepsy, and neuropathy."
+        "para": "Treatment for nervous system disorders like headaches, epilepsy, and neuropathy.",
+        "serviceUrl": "/service/nervous-disorders"
     },
     {
         "image1": img3,
         "name": "Pediatrics",
-        "para": "Complete healthcare, growth monitoring, and treatment of childhood illnesses."
+        "para": "Complete healthcare, growth monitoring, and treatment of childhood illnesses.",
+        "serviceUrl": "/service/pediatrics"
     },
     {
         "image1": img5,
         "name": "TB & Chest",
-        "para": "Diagnosis and treatment of tuberculosis, asthma, and lung diseases."
+        "para": "Diagnosis and treatment of tuberculosis, asthma, and lung diseases.",
+        "serviceUrl": "/service/tb-chest-diseases"
     },
     {
         "image1": img4,
         "name": "Orthopedics",
-        "para": "Specialized care for bone, joint, and muscle-related conditions and treatment"
+        "para": "Specialized care for bone, joint, and muscle-related conditions and treatment",
+        "serviceUrl": "/service/orthopedics"
     },
-
     {
         "image1": img6,
         "name": "Ear, Nose & Throat",
-        "para": "Expert treatment for conditions related to the ear, nose, and throat."
+        "para": "Expert treatment for conditions related to the ear, nose, and throat.",
+        "serviceUrl": "/service/ear-nose-throat"
     },
     {
         "image1": img7,
         "name": "Gall & Kidney",
-        "para": "Management of gallbladder, kidney stones, and urinary tract issues."
+        "para": "Management of gallbladder, kidney stones, and urinary tract issues.",
+        "serviceUrl": "/service/gall-kidney"
     },
     {
         "image1": img8,
         "name": "Urology",
-        "para": "Specialized care for urinary system and reproductive organ disorders."
+        "para": "Specialized care for urinary system and reproductive organ disorders.",
+        "serviceUrl": "/service/urology"
     },
     {
         "image1": img9,
         "name": "Dental Problems",
-        "para": "Diagnosis and treatment of oral health and dental issues."
+        "para": "Diagnosis and treatment of oral health and dental issues.",
+        "serviceUrl": "/service/dental-problems"
     },
     {
         "image1": img10,
         "name": "Cardiac Complaints",
-        "para": "Comprehensive care for heart-related diseases and conditions"
+        "para": "Comprehensive care for heart-related diseases and conditions",
+        "serviceUrl": "/service/cardiac-complaints"
     }
 ];
+
 
 
 
@@ -104,7 +114,7 @@ const ServiceList = () => {
                             <img src={service.image1} alt={service?.name} className="w-16 h-16 object-cover rounded-full mb-2  bg-white p-2  shadow-[#A6182E] shadow-2xl" />
                             <p className="text-lg font-semibold text-gray-800">{service.name}</p>
                             <p className="text-sm text-gray-600 mt-2">{service?.para}</p>
-                            <Link className='font-semibold text-[#1B3C74] justify-end mt-4 hover:text-[#A6182E] ease-in-out duration-300'>Explore More</Link>
+                            <Link to={`/service/${service?.serviceUrl}`} className='font-semibold text-[#1B3C74] justify-end mt-4 hover:text-[#A6182E] ease-in-out duration-300'>Explore More</Link>
                         </div>
                     ))}
                 </div>

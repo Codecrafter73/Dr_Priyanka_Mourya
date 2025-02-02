@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import pattern from '../../assets/pattern/pattern1.jpg';
-import image1 from '../../assets/dr-priyanka/welcome_dr.jpg';
+import image1 from '../../assets/dr-priyanka/welcome.jpg';
 import { Link } from 'react-router-dom';
 import Button from '../../component/Button';
 
@@ -27,7 +27,7 @@ const HomeAbout = () => {
     return (
         <section className="relative bg-gray-100 z-10">
             <div
-                className="absolute inset-0 hidden lg:block"
+                className="absolute inset-0 "
                 style={{
                     backgroundImage: `url(${pattern})`,
                     backgroundSize: 'cover',

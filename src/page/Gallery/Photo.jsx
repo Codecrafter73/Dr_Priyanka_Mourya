@@ -62,12 +62,13 @@ const Photo = () => {
   };
 
   return (
-    <div>
+    <section className='bg-gray-100'>
       {/* Breadcrumb */}
       <BreadCums headText="Our Happy Moment" items={breadcrumbItems} />
 
       {/* gallery Section */}
-      <div className="py-10 sm:py-12 md:py-14 lg:py-16 container px-10 bg-gray-100">
+     
+      <div className="py-10 sm:py-12 md:py-14 lg:py-16 max-w-7xl  mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (
             <div
@@ -122,7 +123,7 @@ const Photo = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

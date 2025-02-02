@@ -146,7 +146,7 @@ const Header = () => {
         {
             name: "Nervous Disorder",
             hasSubItems: false,
-            path: "/service/nervous-disorder"
+            path: "/service/nervous-disorders"
         },
         {
             name: "Pediatrics",
@@ -156,7 +156,7 @@ const Header = () => {
         {
             name: "TB & Chest",
             hasSubItems: false,
-            path: "/service/tb-chest"
+            path: "/service/tb-chest-diseases"
         },
         {
             name: "Orthopedics",
@@ -169,7 +169,7 @@ const Header = () => {
             path: "/service/ear-nose-throat"
         },
         {
-            name: "Gall & Kidney",
+            name: "Gallbladder & Kidney",
             hasSubItems: false,
             path: "/service/gall-kidney"
         },
@@ -189,19 +189,19 @@ const Header = () => {
             path: "/service/cardiac-complaints"
         }
     ];
-    
+
 
 
     const aboutItems = [
         {
-            name: "About Dr. Priyanka Maurya",
-            path: "/about/dr-priyanka",
+            name: "Photo",
+            path: "/gallery/photo",
             hasSubItems: false,
 
         },
         {
-            name: "Bjp Socail Worker",
-            path: "/about/politics",
+            name: "Video",
+            path: "/gallery/video",
             hasSubItems: false,
 
         },
@@ -237,19 +237,19 @@ const Header = () => {
     return (
         <div>
             {isOpen && <div className="fixed inset-0 bg-[#00072c] opacity-70 z-40" onClick={() => setIsOpen(false)}></div>}
-            <div className='flex items-start justify-between  mx-auto'>
+            <div className='flex items-start xl:justify-between  mx-auto '>
                 <div className='mx-auto '>
                     <Link to="/">
-                        <img src={logo} alt="Dr.Priyanka Logo" className='w-[13rem] lg:w-[7.2rem] h-auto object-cover' />
+                        <img src={logo} alt="Dr.Priyanka Logo" className='w-[13rem] lg:w-[10rem] h-auto object-cover' />
                     </Link>
                 </div>
 
 
-                <div className=' h-full'>
-                    <div className="bg-primary text-white py-0 xl:py-1 shadow-lg">
-                        <div className="max-w-full mx-auto  flex flex-col lg:flex-row px-2 lg:justify-around py-2 xl:py-0 items-center gap-2 md:gap-4 lg:gap-60">
+                <div className='h-full'>
+                    <div className="bg-primary text-white py-0 xl:py-1 shadow-lg p-6 ">
+                        <div className="xl:max-w-full mx-auto  flex flex-col lg:flex-row px-2 xl:justify-around items-center gap-2 md:gap-4 xl:gap-60 xl:p-2">
                             {/* Contact Info Section */}
-                            <div className="flex flex-col sm:flex-row items-center gap-2 lg:gap-6 ">
+                            <div className="flex flex-col  sm:flex-row items-center gap-2 lg:gap-6 ">
                                 {/* Phone */}
                                 <div className="flex items-center gap-1">
                                     <FaPhoneAlt className="text-sm text-white" />
@@ -285,79 +285,26 @@ const Header = () => {
                     </div>
 
 
-                    <header className="bg-white text-gray-900  sticky top-0 w-full font-[500]   shadow-lg z-50 flex items-center justify-end">
-                        <div className="relative w-full flex justify-between    items-start ">
+                    <header className="bg-white text-gray-900  sticky top-0 w-full font-[500]   shadow-lg z-50 flex items-center justify-end  p-2 ">
+                        <div className="relative w-full flex xl:justify-between     items-start ">
 
 
                             {/* Desktop Menu */}
-                            <nav className="hidden relative lg:flex px-4 py-4 lg:text-[1rem] text-[1.1rem] xl:text-[1.2rem] items-center  lg:justify-around lg:gap-8 ">
+                            <nav className="hidden relative lg:flex px-4 py-4 lg:text-[1rem] text-[1.1rem] xl:text-[1.2rem] items-center  lg:justify-around lg:gap-10 xl:gap-8 ">
                                 <Link to="/" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
                                     Home
                                     {location.pathname === '/' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
                                 </Link>
+                                <Link to="/about/dr-priyanka" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
+                                    About Us
+                                    {location.pathname === '/about/dr-priyanka' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+                                </Link>
+                                <Link to="/about/politics" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
+                                    Mahila Ayog
+                                    {location.pathname === '/about/politics' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+                                </Link>
 
-                                <div
-                                    className="relative"
-                                    onMouseEnter={() => setActiveAbout(!activeAbout)}
-                                    onMouseLeave={() => {
-                                        setTimeout(() => {
-                                            if (!activeDropdown) setActiveAbout(null);
-                                        }, 200); // Delay hiding the dropdown
-                                    }}
-                                >
-                                    <button
-                                        className={`flex items-center gap-1 transition-all duration-300 hover:text-primary ${activeAbout === 'about' ? 'text-primary' : ''}`}
-                                    >
-                                        About <IoMdArrowDropdown />
-                                    </button>
-
-                                    {/* Dropdown Menu */}
-                                    {activeAbout && (
-                                        <div className="absolute left-0 bg-white shadow-lg text-[0.9rem] rounded-lg w-[18rem] py-2 z-50 border border-gray-300 transition-transform duration-300 ease-in-out transform-gpu">
-                                            {aboutItems.map((treatment) => (
-                                                <div
-                                                    key={treatment.name}
-                                                    className="border-b relative"
-                                                    onMouseEnter={() => setActiveSubDropdown(treatment.name)}
-                                                    onMouseLeave={() => setActiveSubDropdown(null)}
-                                                >
-                                                    <button
-                                                        className="flex justify-between items-center w-full px-2 py-2 hover:bg-gray-100"
-                                                        onClick={() => {
-                                                            if (treatment.hasSubItems) {
-                                                                setActiveSubDropdown(treatment.name); // Show sub-items if available
-                                                            } else {
-                                                                // Navigate to the treatment page directly if no sub-items
-                                                                window.location.href = treatment.path; // Or use history.push if using react-router
-                                                            }
-                                                        }}
-                                                    >
-                                                        {treatment.name}
-                                                        {treatment.hasSubItems && <IoMdArrowDropright />} {/* Only show icon if there are sub-items */}
-                                                    </button>
-
-                                                    {activeSubDropdown === treatment.name && treatment.hasSubItems && (
-                                                        <div className="absolute left-full top-0 bg-white shadow-lg rounded-lg w-48 z-50">
-                                                            {treatment.subItems.map((subItem, index) => (
-                                                                <Link
-                                                                    key={subItem.name}
-                                                                    to={subItem.path}
-                                                                    className={`block px-4 py-2 hover:bg-gray-200 ${index !== treatment.subItems.length - 1 ? 'border-b border-gray-300' : ''}`}
-                                                                    onClick={() => {
-                                                                        setActiveDropdown(null); // Close main dropdown on click
-                                                                        setActiveSubDropdown(null); // Close sub-dropdown on click
-                                                                    }}
-                                                                >
-                                                                    {subItem.name}
-                                                                </Link>
-                                                            ))}
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
+                                
 
                                 {/* <Link to="/about/politics" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/about/politic' ? 'text-primary' : ''}`}>
                                      Bjp Socail Worker
@@ -431,20 +378,84 @@ const Header = () => {
                                     )}
                                 </div>
 
-
+{/* 
                                 <Link to="/gallery/photo" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/gallery/photo' ? 'text-primary' : ''}`}>
-                                    Gallery
-                                    {location.pathname === '/photo' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+                                    Photo
+                                    {location.pathname === '/gallery/photo' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
                                 </Link>
 
-                                <Link to="/gallery/photo" className={`relative transNition-all duration-300 hover:text-primary ${location.pathname === '/gallery/video' ? 'text-primary' : ''}`}>
+                                <Link to="/gallery/video" className={`relative transNition-all duration-300 hover:text-primary ${location.pathname === '/gallery/video' ? 'text-primary' : ''}`}>
                                     Video
-                                    {location.pathname === '/video' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
-                                </Link>
+                                    {location.pathname === '/gallery/video' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+                                </Link> */}
+
+
+                                <div
+                                    className="relative"
+                                    onMouseEnter={() => setActiveAbout(!activeAbout)}
+                                    onMouseLeave={() => {
+                                        setTimeout(() => {
+                                            if (!activeDropdown) setActiveAbout(null);
+                                        }, 200); // Delay hiding the dropdown
+                                    }}
+                                >
+                                    <button
+                                        className={`flex items-center gap-1 transition-all duration-300 hover:text-primary ${activeAbout === 'about' ? 'text-primary' : ''}`}
+                                    >
+                                        Gallery <IoMdArrowDropdown />
+                                    </button>
+
+                                    {/* Dropdown Menu */}
+                                    {activeAbout && (
+                                        <div className="absolute left-0 bg-white shadow-lg text-[0.9rem] rounded-lg w-[18rem] py-2 z-50 border border-gray-300 transition-transform duration-300 ease-in-out transform-gpu">
+                                            {aboutItems.map((treatment) => (
+                                                <div
+                                                    key={treatment.name}
+                                                    className="border-b relative"
+                                                    onMouseEnter={() => setActiveSubDropdown(treatment.name)}
+                                                    onMouseLeave={() => setActiveSubDropdown(null)}
+                                                >
+                                                    <button
+                                                        className="flex justify-between items-center w-full px-2 py-2 hover:bg-gray-100"
+                                                        onClick={() => {
+                                                            if (treatment.hasSubItems) {
+                                                                setActiveSubDropdown(treatment.name); // Show sub-items if available
+                                                            } else {
+                                                                // Navigate to the treatment page directly if no sub-items
+                                                                window.location.href = treatment.path; // Or use history.push if using react-router
+                                                            }
+                                                        }}
+                                                    >
+                                                        {treatment.name}
+                                                        {treatment.hasSubItems && <IoMdArrowDropright />} {/* Only show icon if there are sub-items */}
+                                                    </button>
+
+                                                    {activeSubDropdown === treatment.name && treatment.hasSubItems && (
+                                                        <div className="absolute left-full top-0 bg-white shadow-lg rounded-lg w-48 z-50">
+                                                            {treatment.subItems.map((subItem, index) => (
+                                                                <Link
+                                                                    key={subItem.name}
+                                                                    to={subItem.path}
+                                                                    className={`block px-4 py-2 hover:bg-gray-200 ${index !== treatment.subItems.length - 1 ? 'border-b border-gray-300' : ''}`}
+                                                                    onClick={() => {
+                                                                        setActiveDropdown(null); // Close main dropdown on click
+                                                                        setActiveSubDropdown(null); // Close sub-dropdown on click
+                                                                    }}
+                                                                >
+                                                                    {subItem.name}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
 
                                 <Link to="/testonomial" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/testimonial' ? 'text-primary' : ''}`}>
                                     Testimonial
-                                    {location.pathname === '/testimonial' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+                                    {location.pathname === '/testonomial' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
                                 </Link>
 
                                 <Link
@@ -457,7 +468,7 @@ const Header = () => {
                                 </Link>
 
                                 {/* Social Media Icons Section */}
-                                <div className="flex items-center gap-3">
+                                <div className="items-center gap-3 hidden xl:flex">
                                     {socialLinks.map((link, index) => (
                                         <a
                                             key={index}

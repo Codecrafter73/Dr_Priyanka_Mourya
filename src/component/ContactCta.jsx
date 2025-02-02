@@ -16,7 +16,7 @@ const ContactCta = () => {
                 
         <div className="bg-white text-black rounded-3xl relative z-10 overflow-hidden shadow-lg flex flex-col lg:flex-row items-center">
         <div
-                        className="absolute inset-0 hidden lg:block"
+                        className="absolute inset-0 "
                         style={{
                             backgroundImage: `url(${pattern})`,
                             backgroundSize: 'cover',
@@ -26,11 +26,11 @@ const ContactCta = () => {
                         }}
                     ></div>
           {/* Left Content */}
-          <div className="w-full lg:w-7/12 p-10 lg:p-16">
+          <div className="w-full lg:w-7/12 p-4 lg:p-16">
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               Need Emergency Assistance?
             </h2>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-gray-700 mb-6 text-justify">
               If you require urgent medical attention or need to book an appointment, contact us immediately.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4">

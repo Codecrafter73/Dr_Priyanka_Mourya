@@ -1,28 +1,26 @@
 import React from "react";
 
-const CallToAction= () => {
+const CallToAction = () => {
 	return (
-		<section className="ezy__cta2 light relative overflow-hidden py-14 md:py-24 bg-[#4f2ac0]">
-			{/* shapes  */}
-			<div className="w-[400px] h-[400px] bg-black bg-opacity-5 rounded-full -m-[100px] absolute left-0 top-0"></div>
-			<div className="w-[400px] h-[400px] bg-black bg-opacity-5 rounded-full -m-[100px] absolute right-0 bottom-0"></div>
-
+		<section className="ezy__cta2 light relative overflow-hidden py-10 bg-[#A6182E]">
 			<div className="container relative px-4">
 				<div className="grid grid-cols-12 justify-center text-center text-white">
 					<div className="col-span-12 lg:col-span-6 lg:col-start-4 mx-auto">
 						<div className="lg:px-16">
-							<h2 className="text-2xl md:text-[45px] leading-none font-bold mb-6">
+							<h3 className="text-2xl md:text-[45px] leading-none font-bold mb-6 text-white">
 								Did you know?
-							</h2>
+							</h3>
 							<p className="text-lg leading-6 mb-12">
-								It’s easier to reach your savings goals when you have the right
-								savings account.
+								Good health is the greatest treasure,  
+								With homeopathy, feel the pleasure!  
+								Find the best care, don’t delay,  
+								Book your appointment today!
 							</p>
 							<button
 								type="submit"
 								className="bg-white text-black py-3 px-7 rounded transition"
 							>
-								Subscribe
+								Book Appointment Now
 							</button>
 						</div>
 					</div>
@@ -32,4 +30,4 @@ const CallToAction= () => {
 	);
 };
 
-export default CallToAction
+export default CallToAction;

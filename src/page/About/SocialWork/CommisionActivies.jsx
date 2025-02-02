@@ -28,7 +28,7 @@ const CommissionActivities = () => {
         {activities.map((activity, index) => (
           <div key={index} className="mb-6">
             <h3 className="text-lg font-semibold text-black ">{index + 1}. {activity.title}:-</h3>
-            <p className="text-gray-700 mt-1 text-justify">{activity.description}</p>
+            <p className="text-gray-700 mt-1 text-justify ">{activity.description}</p>
           </div>
         ))}
       </div>

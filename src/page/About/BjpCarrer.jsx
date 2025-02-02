@@ -9,7 +9,7 @@ const BjpCarrer = () => {
     return (
         <section className="relative bg-white z-10">
             <div
-                className="absolute inset-0 hidden lg:block"
+                className="absolute inset-0"
                 style={{
                     backgroundImage: `url(${pattern})`,
                     backgroundSize: 'cover',

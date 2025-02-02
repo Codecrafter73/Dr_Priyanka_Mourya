@@ -3,7 +3,7 @@ import React from "react";
 const ImportantInfo = () => {
   return (
     <section className="bg-white py-10 sm:py-12 md:py-14 lg:py-16">
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4">
       <h2 className="text-xl font-bold text-black border-b pb-2">आवश्यक सूचना</h2>
       <ul className="text-black mt-4 space-y-2">
         <li className="text-red-600 font-semibold">

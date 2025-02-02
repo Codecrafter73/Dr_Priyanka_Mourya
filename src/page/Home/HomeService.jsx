@@ -56,7 +56,7 @@ const HomeService = () => {
             <div className="w-full max-w-7xl mx-auto ">
                 <div className='flex flex-col gap-2'>
                     <h2 className="text-center">Our Best Services </h2>
-                    <h1 className="font-bold text-gray-800 text-center">
+                    <h1 className="font-bold text-gray-800 lg:text-center text-justify">
                         Transforming Lives with best Homeopathic Services in Lucknow
                     </h1>
                 </div>

@@ -9,6 +9,10 @@ import ServiceHome from './ServiceHome'
 import ContactCta from '../../component/ContactCta'
 import HomeBlog from '../Blog/HomeBlog'
 import BjpSocailWork from './BjpSocialWork'
+import Feedback from './Feedback'
+import YouTubeSlider from './YoutubeLink'
+import ReviewComponent from '../../component/ReviewComponent'
+import SocialGallery from '../About/SocialWork/Gallery'
 
 
 const Home = () => {
@@ -23,7 +27,12 @@ const Home = () => {
         <ContactCta/>
         <BjpPriyanka/>
         {/* <BjpSocailWork/> */}
+        <YouTubeSlider/>
+        <SocialGallery/>
+        {/* <Feedback/> */}
+        <ReviewComponent/>
         <HomeBlog/>
+        
 
       
     </div>

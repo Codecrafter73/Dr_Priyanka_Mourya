@@ -33,11 +33,11 @@ const BjpPriyanka = () => {
           <h1 className="font-bold text-[#201654] mb-4">
            BJP Leader & Member of Uttar Pradesh Women's Commission
           </h1>
-            <p className="leading-relaxed mb-2">
+            <p className="leading-relaxed mb-2 text-justify">
               Dr. Priyanka Maurya, a renowned homeopathic physician, social worker, and BJP leader, has been appointed by the <strong>Yogi Adityanath</strong> government of Uttar Pradesh as a member of the state’s Women Commission. She is known for her significant role in the Congress campaign <strong>"Ladki Hoon, Lad Sakti Hoon"</strong>    during the 2022 assembly elections but later parted ways with Congress due to internal party issues. Since joining BJP, she has been actively campaigning for various candidates and causes, especially <strong>Women's empowerment</strong>.
             </p>
           
-            <p className="leading-relaxed">
+            <p className="leading-relaxed text-justify">
               Dr. Maurya has more than <strong>10 years of experience</strong> in social service and is actively involved in numerous social initiatives. She is the founder of <strong>"Neki Ki Deewar"</strong> in Lucknow, an initiative aimed at helping the underprivileged. She is also the National Coordinator for <strong>Roti Bank and National Vice</strong> President of the Shambhuka Foundation.
             </p>
             {/* <p className="text-lg leading-relaxed">

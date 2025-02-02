@@ -17,7 +17,7 @@ const Feature = () => {
 
         <section className="relative bg-white z-10 py-10 sm:py-12 md:py-14 lg:py-16">
             <div
-                className="absolute inset-0 hidden lg:block"
+                className="absolute inset-0 "
                 style={{
                     backgroundImage: `url(${bgImage})`,
                     backgroundSize: 'cover',
@@ -26,12 +26,12 @@ const Feature = () => {
                     zIndex: -10,
                 }}
             ></div>
-            <div className="max-w-7xl  sm:py-10 mx-auto py-10">
-                <div className="lg:flex lg:items-start">
+       
+                <div className="lg:flex lg:items-start max-w-7xl  mx-auto ">
 
                     <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center relative ">
                         <img
-                            className="w-[10rem] h-[10rem] object-cover xl:w-[28rem] xl:h-[28rem] rounded-xl"
+                            className="w-[10rem] h-[10rem] object-cover lg:w-[28rem] lg:h-[28rem] rounded-xl"
                             src={image}
                             alt="Healthcare services"
                         />
@@ -47,16 +47,16 @@ const Feature = () => {
                     </div>
 
 
-                    <div className="w-full space-y-6 lg:w-1/2 ">
+                    <div className="max-w-7xl space-y-6 lg:w-1/2 px-4 sm:px-6 md:px-8 lg:px-2 ">
                         <div>
-                            <h2 className="mb-4">Why Choose Us</h2>
+                            <h2 className="mb-2">Why Choose Us</h2>
                             <h1 className="">
                                 Dr. Priyanka – Best Homeopathic Doctor in Lucknow
                             </h1>
 
                         </div>
 
-                        <div className='flex items-start gap-10 '>
+                        <div className='flex flex-col md:flex-row items-start gap-10 '>
                             {/* First Point */}
                             <div data-aos="fade-up" className="flex  flex-col md:items-start  w-fit ">
                                 <span className="inline-block p-2  text-main bg-blue-100 rounded-xl text-[#fff] bg-primary">
@@ -93,7 +93,7 @@ const Feature = () => {
                             </div>
                         </div>
 
-                        <div className='flex items-start gap-10 '>
+                        <div className='flex flex-col md:flex-row items-start gap-10 '>
                             {/* third Point */}
                             <div data-aos="fade-up" className="flex  flex-col md:items-start   w-fit ">
                                 <span className="inline-block p-2  text-main bg-blue-100 rounded-xl text-[#fff] bg-primary">
@@ -134,9 +134,8 @@ const Feature = () => {
 
                     </div>
 
-
                 </div>
-            </div>
+          
 
 
         </section>

@@ -13,7 +13,7 @@ const WomenSocialLeaderShip = () => {
     return (
         <section className='py-10 sm:py-12 md:py-14 lg:py-16 bg-gray-100 relative z-10'>
             <div
-                className="absolute inset-0 hidden lg:block"
+                className="absolute inset-0 "
                 style={{
                     backgroundImage: `url(${pattern})`,
                     backgroundSize: 'cover',
@@ -23,7 +23,7 @@ const WomenSocialLeaderShip = () => {
                 }}
             ></div>
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col lg:flex-row-reverse items-center lg:items-start  rounded-xl overflow-hidden">
+                <div className="flex  flex-col-reverse lg:flex-row-reverse items-center lg:items-start  rounded-xl overflow-hidden">
                     {/* Left Side - Image */}
                     <div className="w-full lg:w-1/2 ">
                         <div className="flex justify-center">
@@ -42,7 +42,7 @@ const WomenSocialLeaderShip = () => {
                     <div className="w-full lg:w-2/3 px-6 lg:px-8 text-[#201654] space-y-6 ">
                         <div className='flex items-end h-fit gap-6'>
                             <img src={logo} alt="bjplogo" className='w-30 h-30 object-cover' />
-                            <h4 className="text-xl font-semibold text-[#A6182E] text-end ">"नारी शक्ति: बदलाव की नई लहर"</h4>
+                            <h4 className="text-xl font-semibold text-[#A6182E] text-end text-justify">"नारी शक्ति: बदलाव की नई लहर"</h4>
 
                         </div>
 
@@ -54,14 +54,14 @@ const WomenSocialLeaderShip = () => {
                             <h1 className="font-bold text-[#201654] mb-4">
                                 नारी का सम्मान, समाज की पहचान
                             </h1>
-                            <p className="leading-relaxed mb-2 font-bold text-[#201654] text-3xl">
+                            <p className="leading-relaxed mb-2 font-bold text-[#201654] xl:text-3xl text-lg md:text-2xl">
                                 Respect for Women, Identity of Society
                             </p>
 
-                            <p className="leading-relaxed">
-                                Dr. Priyanka Maurya has been a leading voice for <strong>women empowerment</strong>. She was the face of the <strong>"Ladki Hoon, Lad Sakti Hoon"</strong> campaign but later exposed the internal politics of Congress after being denied a ticket unfairly.</p> <p>She then joined <strong>BJP</strong> and actively contributed to various social causes. A successful homeopathic physician, she is also involved in NGOs like Atal Bharat Trust and Roti Bank, working towards <strong>health, hygiene, and social welfare</strong>
+                            <p className="leading-relaxed text-justify">
+                                Dr. Priyanka Maurya has been a leading voice for <strong>women empowerment</strong>. She was the face of the <strong>"Ladki Hoon, Lad Sakti Hoon"</strong> campaign but later exposed the internal politics of Congress after being denied a ticket unfairly.</p> <p className='text-justify' >She then joined <strong>BJP</strong> and actively contributed to various social causes. A successful homeopathic physician, she is also involved in NGOs like Atal Bharat Trust and Roti Bank, working towards <strong>health, hygiene, and social welfare</strong>
                             </p>
-                            <ul className="mt-4 list-disc pl-5">
+                            <ul className="mt-4 list-disc pl-5 text-justify">
                                 <li><strong className='color-primary'>Senior BJP Leader:</strong> Actively campaigning for party candidates and contributing to the party’s mission.</li>
                                 <li><strong className='color-primary'>Anti-Drug Awareness Program:</strong> Leading a national initiative in collaboration with Shri Kaushal Kishore, raising awareness about the dangers of drugs.</li>
                                 <li><strong className='color-primary'>Road Safety Awareness:</strong> Organizing campaigns in Lucknow to educate the public on road safety and traffic rules.</li>

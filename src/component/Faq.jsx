@@ -80,9 +80,9 @@ FaqItem.propTypes = {
 
 const AboutFaq = () => {
 	return (
-		<section className="py-10 sm:py-12 md:py-14 lg:py-16 bg-gray-100 text-black overflow-y-hidden">
-			<div className="container px-4 md:px-8 lg:px-28 mx-auto">
-				<div className="grid grid-cols-12 justify-center md:mb-6" data-aos="zoom-in">
+		<section className="w-fit bg-gray-100 text-black overflow-y-hidden">
+			<div className=" mx-auto">
+				<div className="grid grid-cols-12 justify-center md:mb-6" >
 					<div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 flex items-center justify-center flex-col">
 						<h1 className=" text-center">
 							Frequently Asked Questions
@@ -91,7 +91,7 @@ const AboutFaq = () => {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-12 gap-0 md:gap-6 ">
+				<div className="grid grid-cols-8 gap-0 md:gap-6 max-w-4xl mx-auto ">
 					<div className="col-span-12 md:col-span-6 border-red-500">
 						{faqList.slice(0, Math.floor(faqList.length / 2)).map((faq, i) => (
 							<FaqItem faq={faq} key={i} />

@@ -47,7 +47,7 @@ body {
   h2 {
     font-family: 'El Messiri', sans-serif;
     font-weight: 600;
-    font-size: 1rem; /* Default for smaller screens */
+    font-size: 1.5rem; /* Default for smaller screens */
     color: #A6182E;
   }
 
@@ -57,19 +57,19 @@ body {
   /* Media queries for larger screens */
   @media (min-width: 640px) {
     h1 {
-      font-size: 2.5rem; /* Small tablets and up */
+      font-size: 2rem; /* Small tablets and up */
     }
     h2 {
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
   }
   
   @media (min-width: 768px) {
     h1 {
-      font-size: 3rem; /* Tablets and up */
+      font-size: 2.2rem; /* Tablets and up */
     }
     h2 {
-      font-size: 1rem;
+      font-size: 2rem;
     }
   }
   
@@ -78,7 +78,7 @@ body {
       font-size: 2.5rem; /* Larger tablets and desktops */
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 2.2rem;
 
     }
   }
@@ -88,7 +88,7 @@ body {
       font-size: 2.5rem; /* Laptops and desktops */
     }
     h2 {
-      font-size: 2rem;
+      font-size: 2.3rem;
     }
   }
   

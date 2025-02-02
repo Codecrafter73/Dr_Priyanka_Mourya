@@ -20,6 +20,7 @@ import AboutPriyanka from './page/About/About-Priyanka'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Video from './page/Gallery/Video'
 
 
 const App = () => {
@@ -47,10 +48,11 @@ const App = () => {
           <Route path="/testonomial" element={<Testimonials/>} />
           <Route path="/contact" element={<ContactPage/>} />
           <Route path="/gallery/photo" element={<Photo/>} />
+          <Route path="/gallery/video" element={<Video/>} />
           <Route path="/service/:name" element={<ServiceDetail/>} />
         </Routes>
       <Footer/>
-      <BottomFooter/>
+      {/* <BottomFooter/> */}
       </>
       )      
 }

@@ -18,7 +18,7 @@ const ComponentOne = () => {
             <img src={firstImage} alt="First" className="w-full md:w-1/3 rounded-lg" />
             <div className="md:w-2/3 text-left">
                 <h2 className="text-xl font-bold mb-2">Introduction to the Commission</h2>
-                <p>
+                <p className="text-justify">
                     Women Commission was formed in 2002 with the objective of redressal of complaints related to harassment of women
                     in the state, advising the government in the development process and taking necessary steps for their empowerment.
                     In the year 2004, Uttar Pradesh State Women Commission Act 2004 came into existence to provide legal basis to the
@@ -37,10 +37,10 @@ const ComponentTwo = () => {
             <img src={secondImage} alt="Second" className="w-full md:w-1/3 rounded-lg" />
             <div className="md:w-2/3 text-left">
                 <h2 className="text-xl font-bold mb-2">Objective of the Commission</h2>
-                <ul className="list-disc pl-5">
+                <ul className="list-disc pl-5 text-justify">
                     <li>To protect the rights of women's welfare, safety, protection.</li>
                     <li>To continuously strive for the educational, economic and social development of women.</li>
-                    <li>To send suggestions and recommendations to the State Government after monitoring for remedial measures
+                    <li className="text-justify">To send suggestions and recommendations to the State Government after monitoring for remedial measures
                         related to the constitutional and legal rights given to women.</li>
                 </ul>
             </div>
@@ -54,7 +54,7 @@ const ComponentThree = () => {
             <img src={thirdImage} alt="Third" className="w-full md:w-1/3 rounded-lg" />
             <div className="md:w-2/3 text-left">
                 <h2 className="text-xl font-bold mb-2">Powers of the Commission</h2>
-                <ul className="list-disc pl-5">
+                <ul className="list-disc pl-5 text-justify">
                     <li>Right to exercise the powers of a civil court to try a suit.</li>
                     <li>To summon.</li>
                     <li>Requesting documents.</li>
@@ -69,7 +69,7 @@ const ComponentThree = () => {
 const MainComponent = () => {
     return (
         <section className="bg-gray-100 py-10 sm:py-12 md:py-14 lg:py-6">
-            <div className="max-w-7xl mx-auto space-y-6 p-6">
+            <div className="max-w-7xl mx-auto space-y-6 ">
                 <Ayog />
                 <ComponentOne />
                 <ComponentTwo />
