@@ -16,8 +16,8 @@ const timetable = [
 
 const DoctorTimetable = () => {
     return (
-        <section className="bg-gray-100 py-10 sm:py-12 md:py-14 lg:py-16 z-10 relative">
-            <div className="flex items-center justify-center mx-auto ">
+        <section className="bg-gray-100 py-10 sm:py-12 md:py-14 lg:py-16 z-10 relative ">
+            <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between mx-auto gap-10  max-w-7xl ">
                 <div
                     className="absolute inset-0"
                     style={{
@@ -28,7 +28,7 @@ const DoctorTimetable = () => {
                         zIndex: -10,
                     }}
                 ></div>
-                <div className="max-w-[50%] mx-auto p-4 z-10 ">
+                <div className="lg:max-w-[50%] mx-auto px-4 z-10 ">
                     <h2 className="text-2xl font-bold text-center mb-4">Dr. Priyanka Maurya Homeopathy Clinic</h2>
                     <div className=" shadow-md rounded-lg overflow-hidden">
                         <table className="w-full text-left border-collapse">
@@ -49,7 +49,7 @@ const DoctorTimetable = () => {
                         </table>
                     </div>
                     <div className="text-center mt-6">
-                        <Button text={"Book Appointment"} />
+                        <Button text={"Book Appointment"} url={"/contact"} />
                     </div>
                 </div>
                 <AboutFaq/>

@@ -3,8 +3,9 @@ import Slider from 'react-slick';
 import { FaArrowLeft, FaArrowRight, FaPills, FaHeartbeat, FaUserMd, FaMicroscope, FaAppleAlt } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import b1 from '../../assets/banner/banner2.jpg'
-import b2 from '../../assets/banner/banner2.jpg'
+import b1 from '../../assets/banner/banner.jpg'
+import b2 from '../../assets/banner/banner3.jpg'
+import b3 from '../../assets/banner/banner5.jpg'
 
 const HomeSlider = () => {
   useEffect(() => {
@@ -38,15 +39,15 @@ const HomeSlider = () => {
   ];
 
   return (
-    <div className="relative w-full mx-auto">
+    <div className="relative w-full mx-auto ">
       {/* Slider Section */}
       <Slider {...settings} className="relative h-auto">
-        {[b1,b2].map((src, index) => (
+        {[b1,b2,b3].map((src, index) => (
           <div className="relative" key={index}>
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full  object-cover transition-transform duration-500 transform  hover:opacity-90  h-[70vh]"
+              className="w-full  object-cover transition-transform duration-500 transform  hover:opacity-90  h-auto"
               style={{ maxHeight: '100%' }} // Ensure image doesn't overflow
             />
           </div>
@@ -58,17 +59,17 @@ const HomeSlider = () => {
 };
 
 // Reusable Service Item Component
-const ServiceItem = ({ icon, title }) => (
-  <div
-    className="flex flex-col items-center text-center space-y-4 p-6 rounded-full border border-[#1E3A8A] bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 transform"
-    data-aos="zoom-in"
-  >
-    <div className="icon bg-[#1E3A8A] text-white rounded-full p-4 mb-4 flex items-center justify-center text-4xl">
-      {icon}
-    </div>
-    <h3 className="text-lg font-semibold text-[#1E3A8A]">{title}</h3>
-  </div>
-);
+// const ServiceItem = ({ icon, title }) => (
+//   <div
+//     className="flex flex-col items-center text-center rounded-full  bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 transform border border-red-500"
+//     data-aos="zoom-in"
+//   >
+//     <div className="icon bg-[#1E3A8A] text-white rounded-full p-4 mb-4 flex items-center justify-center text-4xl">
+//       {icon}
+//     </div>
+//     <h3 className="text-lg font-semibold text-[#1E3A8A]">{title}</h3>
+//   </div>
+// );
 
 // Arrows for Slider
 const SampleNextArrow = (props) => {

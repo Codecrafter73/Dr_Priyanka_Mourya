@@ -19,7 +19,7 @@ const ReviewComponent = () => {
 
 
   return (
-    <section className='py-10 mx-auto bg-gray-100'>
+    <section className='pt-10 mx-auto bg-gray-100'>
         <h2 className='text-center mb-4'>What Our Patient Say</h2>
     <div
       className="tagembed-widget max-w-7xl mx-auto "

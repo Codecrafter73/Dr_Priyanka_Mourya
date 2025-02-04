@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/bjp/bjp1.jpg';
+import image from '../../assets/dr-priyanka/bjpneeta.jpg';
 import Button from '../../component/Button';
 import logo from '../../assets/bjp/bjplogo.png'
 
@@ -7,9 +7,9 @@ const BjpPriyanka = () => {
   return (
     <section className='py-10 sm:py-12 md:py-14 lg:py-16'>
     <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start  rounded-xl overflow-hidden">
+      <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start  rounded-xl overflow-hidden">
         {/* Left Side - Image */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 mt-4 lg:mt-0  px-4">
           <img
             src={image}
             alt="Dr. Priyanka Maurya"
@@ -21,7 +21,7 @@ const BjpPriyanka = () => {
         <div className="w-full lg:w-2/3 px-6 lg:px-8 text-[#201654] space-y-6 ">
         <div className='flex items-end h-fit gap-6'>
           <img src={logo} alt="bjplogo" className='w-30 h-30 object-cover' />
-           <h4 className="text-xl font-semibold text-[#A6182E] text-end ">"Meet Dr. Priyanka Maurya" - BJP Socail Worker</h4>
+           <h4 className="lg:text-xl text-lg  font-semibold text-[#A6182E] text-center">"Meet Dr. Priyanka Maurya" - BJP Socail Worker</h4>
 
         </div>
       

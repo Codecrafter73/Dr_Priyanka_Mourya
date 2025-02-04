@@ -3,7 +3,7 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { MdArrowDropUp } from "react-icons/md";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Link, useLocation, NavLink, useNavigate } from 'react-router-dom';
-import logo from "../assets/logo/priyalogo.jpg";
+import logo from "../assets/logo/DrPriyankaMauryalogo.png";
 import { FiMenu, FiX, FiMinus } from 'react-icons/fi';
 import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import { FaSquareThreads } from "react-icons/fa6";
@@ -35,17 +35,17 @@ const Header = () => {
     const socialLinks = [
         {
             icon: <FaFacebookF />,
-            url: "https://www.facebook.com/people/Ashirwad-Vastu-Consulting/61571230313314/",
+            url: "https://www.facebook.com/drpriyankamaurya27/",
             color: "bg-blue-600", // Facebook blue
         },
         {
             icon: <FaInstagram />,
-            url: "https://www.instagram.com/ashirwadvastuconsulting/",
+            url: "https://www.instagram.com/drpriyankamaurya27/?hl=en",
             color: "bg-gradient-to-r from-pink-500 to-yellow-500", // Instagram gradient
         },
         {
             icon: <FaYoutube />,
-            url: "https://www.youtube.com/@AshirwadVastuConsulting",
+            url: "https://www.youtube.com/@DrPriyankaMauryaHomeopathy",
             color: "bg-red-600", // YouTube red
         },
         // {
@@ -55,12 +55,12 @@ const Header = () => {
         // },
         {
             icon: <FaSquareThreads />,
-            url: `https://www.threads.net/@ashirwadvastuconsulting`, // Replace with your WhatsApp number
+            url: `https://www.threads.net/@drpriyankamaurya27`, // Replace with your WhatsApp number
             color: "bg-[#000000]", // WhatsApp green
         },
         {
             icon: <BsTwitterX />,
-            url: `https://x.com/AshirwadVastu`, // Replace with your WhatsApp number
+            url: `https://x.com/dpriyankamaurya?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor`, // Replace with your WhatsApp number
             color: "bg-[#141414]", // WhatsApp green
         },
     ];
@@ -194,13 +194,13 @@ const Header = () => {
 
     const aboutItems = [
         {
-            name: "Photo",
+            name: "Photo Gallery",
             path: "/gallery/photo",
             hasSubItems: false,
 
         },
         {
-            name: "Video",
+            name: " Video Gallery",
             path: "/gallery/video",
             hasSubItems: false,
 
@@ -240,21 +240,21 @@ const Header = () => {
             <div className='flex items-start xl:justify-between  mx-auto '>
                 <div className='mx-auto '>
                     <Link to="/">
-                        <img src={logo} alt="Dr.Priyanka Logo" className='w-[13rem] lg:w-[10rem] h-auto object-cover' />
+                        <img src={logo} alt="Dr.Priyanka Logo" className='w-[6rem] md:w-[8rem] sm:w-[7rem] lg:w-[8rem] xl:w-[9rem] h-auto object-cover ' />
                     </Link>
                 </div>
 
 
                 <div className='h-full'>
-                    <div className="bg-primary text-white py-0 xl:py-1 shadow-lg p-6 ">
-                        <div className="xl:max-w-full mx-auto  flex flex-col lg:flex-row px-2 xl:justify-around items-center gap-2 md:gap-4 xl:gap-60 xl:p-2">
+                    <div className="bg-primary text-white py-0 xl:py-1 shadow-lg p-2">
+                        <div className="xl:max-w-full mx-auto  flex flex-col md:flex-row px-2  items-center gap-2 md:gap-4">
                             {/* Contact Info Section */}
-                            <div className="flex flex-col  sm:flex-row items-center gap-2 lg:gap-6 ">
+                            <div className="flex flex-row  sm:flex-row items-center gap-2 lg:gap-6 py-3  ">
                                 {/* Phone */}
                                 <div className="flex items-center gap-1">
                                     <FaPhoneAlt className="text-sm text-white" />
                                     <a href="tel:917667238292" className="text-xs sm:text-sm lg:text-base font-normal tracking-wide group-hover:text-[#0e2024] transition-colors duration-300 ">
-                                        <span>Toll Free: </span>+91 7667238292
+                                        +91 7667238292
                                     </a>
                                 </div>
 
@@ -270,13 +270,13 @@ const Header = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-2 group transition-transform duration-300 transform hover:scale-105">
+                            <div className="flex md:hidden lg:flex items-center gap-2 group transition-transform duration-300 transform hover:scale-105">
                                 <MdOutlineHomeWork className="text-base lg:text-lg text-[#fff] group-hover:text-[#0e2024] transition-colors duration-300" />
                                 <a
                                     href="mailto:shanyaglobal.lko@gmail.com"
                                     className="text-xs sm:text-sm lg:text-base font-normal tracking-wide group-hover:text-[#0e2024] transition-colors duration-300"
                                 >
-                                    Working Hours - Mon - Sun: 8:00AM - 08:00PM
+                                     Mon - Sun: 8:00AM - 08:00PM
                                 </a>
                             </div>
 
@@ -285,22 +285,22 @@ const Header = () => {
                     </div>
 
 
-                    <header className="bg-white text-gray-900  sticky top-0 w-full font-[500]   shadow-lg z-50 flex items-center justify-end  p-2 ">
-                        <div className="relative w-full flex xl:justify-between     items-start ">
+                    <header className="bg-white text-gray-900  sticky top-0 w-full font-[500]   shadow-lg z-50 ">
+                        <div className="relative  ">
 
 
                             {/* Desktop Menu */}
-                            <nav className="hidden relative lg:flex px-4 py-4 lg:text-[1rem] text-[1.1rem] xl:text-[1.2rem] items-center  lg:justify-around lg:gap-10 xl:gap-8 ">
+                            <nav className="hidden relative lg:flex px-1 py-1 lg:text-[1rem] text-[1.1rem] xl:text-[1.2rem] items-center  lg:justify-around lg:gap-2 xl:gap-8 border border-green-500  pt-4">
                                 <Link to="/" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
                                     Home
                                     {location.pathname === '/' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
                                 </Link>
                                 <Link to="/about/dr-priyanka" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
-                                    About Us
+                                    About Dr. Priyanka Maurya
                                     {location.pathname === '/about/dr-priyanka' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
                                 </Link>
                                 <Link to="/about/politics" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
-                                    Mahila Ayog
+                                Rajya Mahila Ayog
                                     {location.pathname === '/about/politics' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
                                 </Link>
 
@@ -468,7 +468,7 @@ const Header = () => {
                                 </Link>
 
                                 {/* Social Media Icons Section */}
-                                <div className="items-center gap-3 hidden xl:flex">
+                                <div className="items-center gap-3 md:hidden flex ">
                                     {socialLinks.map((link, index) => (
                                         <a
                                             key={index}
@@ -487,10 +487,25 @@ const Header = () => {
                             </nav>
 
 
-                            <div className="lg:hidden">
+                            <div className="lg:hidden gap-4 flex items-start justify-around  md:pt-4 ">
                                 <button onClick={toggleMenu}>
                                     <FiMenu className="w-6 h-6" />
                                 </button>
+                                <div className="items-center gap-3 lg:hidden flex xl:flex">
+                                    {socialLinks.map((link, index) => (
+                                        <a
+                                            key={index}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={`text-white w-8 h-8 flex items-center justify-center rounded-full ${link.color} hover:opacity-80`}
+                                            aria-label="Social Media Link"
+                                        >
+                                            {link.icon}
+                                        </a>
+                                    ))}
+                                </div>
+                                
                             </div>
                         </div>
                         {sideDrop && (

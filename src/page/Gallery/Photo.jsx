@@ -24,6 +24,27 @@ import img18 from '../../assets/gallery/gallery18.jpg';
 import img19 from '../../assets/gallery/gallery19.jpg';
 import img20 from '../../assets/gallery/gallery20.jpg';
 
+import img21 from '../../assets/gallery/GalleryColl/gal1.jpg'
+import img22 from '../../assets/gallery/GalleryColl/gal2.jpg'
+import img23 from '../../assets/gallery/GalleryColl/gal3.jpg'
+import img24 from '../../assets/gallery/GalleryColl/gal4.jpg'
+import img25 from '../../assets/gallery/GalleryColl/gal5.jpg'
+import img26 from '../../assets/gallery/GalleryColl/gal6.jpg'
+import img27 from '../../assets/gallery/GalleryColl/gal7.jpg'
+import img28 from '../../assets/gallery/GalleryColl/gal8.jpg'
+import img29 from '../../assets/gallery/GalleryColl/gal9.jpg'
+import img30 from '../../assets/gallery/GalleryColl/gal10.jpg'
+import img31 from '../../assets/gallery/GalleryColl/gal11.jpg'
+import img32 from '../../assets/gallery/GalleryColl/gal12.jpg'
+import img33 from '../../assets/gallery/GalleryColl/gal13.jpg'
+import img34 from '../../assets/gallery/GalleryColl/gal14.jpg'
+import img35 from '../../assets/gallery/GalleryColl/gal15.jpg'
+import img36 from '../../assets/gallery/GalleryColl/gal16.jpg'
+
+
+
+import { useLocation } from 'react-router-dom';
+
 
 const Photo = () => {
   const breadcrumbItems = [
@@ -33,16 +54,28 @@ const Photo = () => {
   ];
 
   const images = [
-    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12,
-    img13, img14, img15, img16, img17, img18,img19,img20
+   img21,img22,img23,img24,img25,img26,img27, img28,img29,img30,img31,img32,img33,img34,img35,img36
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const location = useLocation()
+
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
   }, []);
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    if (location.pathname === '/gallery/photo') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   const openModal = (index) => {
     setCurrentIndex(index);
@@ -67,7 +100,7 @@ const Photo = () => {
       <BreadCums headText="Our Happy Moment" items={breadcrumbItems} />
 
       {/* gallery Section */}
-     
+
       <div className="py-10 sm:py-12 md:py-14 lg:py-16 max-w-7xl  mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (

@@ -80,24 +80,19 @@ FaqItem.propTypes = {
 
 const AboutFaq = () => {
 	return (
-		<section className="w-fit bg-gray-100 text-black overflow-y-hidden">
-			<div className=" mx-auto">
-				<div className="grid grid-cols-12 justify-center md:mb-6" >
-					<div className="col-span-12 lg:col-span-8 lg:col-start-3 xl:px-12 flex items-center justify-center flex-col">
-						<h1 className=" text-center">
-							Frequently Asked Questions
-						</h1>
-						{/* <SVGICON /> */}
-					</div>
-				</div>
+		<section className="w-fit bg-gray-100 text-black overflow-y-hidden ">
+			<div className="max-w-3xl mx-auto px-4">
 
-				<div className="grid grid-cols-8 gap-0 md:gap-6 max-w-4xl mx-auto ">
-					<div className="col-span-12 md:col-span-6 border-red-500">
+
+				<h1>Frequently Asked Questions</h1>
+
+				<div className="grid grid-cols-8 gap-0 md:gap-6  mx-auto ">
+					<div className="col-span-12 md:col-span-12 ">
 						{faqList.slice(0, Math.floor(faqList.length / 2)).map((faq, i) => (
 							<FaqItem faq={faq} key={i} />
 						))}
 					</div>
-					<div className="col-span-12 md:col-span-6">
+					<div className="col-span-12 md:col-span-12">
 						{faqList.slice(Math.floor(faqList.length / 2), faqList.length).map((faq, i) => (
 							<FaqItem faq={faq} key={i} />
 						))}

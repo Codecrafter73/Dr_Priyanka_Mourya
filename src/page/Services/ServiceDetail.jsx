@@ -40,11 +40,7 @@ const ServiceDetail = () => {
     const { serviceSlug } = useParams();  // Get the slug from the URL
     const [activeService, setActiveService] = useState(null)
     const location = useLocation();
-    const breadcrumbItems = [
-        { label: 'Home', href: '/' },
-        { label: 'Service' ,href:'/service'},
-        { label: 'Name' }
-    ];
+  
     const services = [
         {
             "image1": img1,
@@ -84,7 +80,7 @@ const ServiceDetail = () => {
         },
         {
             "image1": img7,
-            "name": "Gall & Kidney",
+            "name": "Gallblander & Kidney",
             "para": "Management of gallbladder, kidney stones, and urinary tract issues.",
             "serviceUrl": "/service/gall-kidney"
         },
@@ -106,8 +102,8 @@ const ServiceDetail = () => {
             "para": "Comprehensive care for heart-related diseases and conditions",
             "serviceUrl": "/service/cardiac-complaints"
         }
-    ];
-    
+    ]
+
 
 
     const serviceDetails = [
@@ -123,7 +119,7 @@ const ServiceDetail = () => {
             treatment: "Treatment involves long-term medication, homeopathic remedies, and lifestyle changes. A holistic approach, including proper nutrition and stress management, can aid recovery.",
             doctorInfo: "Dr. Priyanka Maurya is a renowned homeopathic doctor specializing in TB & Chest diseases. With years of experience, she provides personalized treatments and holistic care to help patients recover naturally.",
             serviceUrl: "tb-chest-diseases",
-            image:chest
+            image: chest
         },
         {
             serviceName: "Obs & Gynecology",
@@ -137,7 +133,7 @@ const ServiceDetail = () => {
             treatment: "Holistic and homeopathic treatments focusing on restoring hormonal balance and reproductive health through natural remedies and lifestyle changes.",
             doctorInfo: "Dr. Priyanka Maurya offers expert homeopathic care for women's health issues, providing safe and effective treatments for gynecological disorders.",
             serviceUrl: "obs-gynecology",
-            image:gyne
+            image: gyne
         },
         {
             serviceName: "Nervous Disorders",
@@ -151,8 +147,8 @@ const ServiceDetail = () => {
             treatment: "A holistic approach including homeopathic medicine, diet management, and stress reduction techniques to improve nervous system health.",
             doctorInfo: "Dr. Priyanka Maurya specializes in treating nervous disorders with homeopathy, providing relief from chronic neurological conditions.",
             serviceUrl: "nervous-disorders",
-            image:nervous
-            
+            image: nervous
+
         },
         {
             serviceName: "Pediatrics",
@@ -166,7 +162,7 @@ const ServiceDetail = () => {
             treatment: "Holistic and homeopathic treatments ensuring safe and natural remedies for children's health conditions.",
             doctorInfo: "Dr. Priyanka Maurya provides expert pediatric care, offering homeopathic solutions for common childhood diseases.",
             serviceUrl: "pediatrics",
-            image:pedetric
+            image: pedetric
         },
         {
             serviceName: "TB & Chest Diseases",
@@ -180,7 +176,7 @@ const ServiceDetail = () => {
             treatment: "TB treatment involves long-term medication, homeopathic remedies, and lifestyle changes. Proper nutrition and stress management can aid recovery.",
             doctorInfo: "Dr. Priyanka Maurya specializes in TB & Chest diseases, offering personalized and holistic treatment plans.",
             serviceUrl: "tb-chest-diseases",
-            image:chest
+            image: chest
         },
         {
             serviceName: "Orthopedics",
@@ -194,7 +190,7 @@ const ServiceDetail = () => {
             treatment: "Non-invasive homeopathic treatments for joint pain, bone fractures, and musculoskeletal disorders, improving mobility and reducing pain.",
             doctorInfo: "Dr. Priyanka Maurya provides natural orthopedic solutions, focusing on long-term musculoskeletal health without side effects.",
             serviceUrl: "orthopedics",
-            image:orthopedic
+            image: orthopedic
         },
         {
             serviceName: "Ear, Nose & Throat (ENT)",
@@ -208,7 +204,7 @@ const ServiceDetail = () => {
             treatment: "Holistic treatments for common ENT disorders such as ear infections, sinus issues, and throat conditions using homeopathy and natural remedies.",
             doctorInfo: "Dr. Priyanka Maurya specializes in ENT conditions, offering non-invasive treatments that focus on restoring natural health.",
             serviceUrl: "ear-nose-throat",
-            image:nose
+            image: nose
         },
         {
             serviceName: "Gall & Kidney",
@@ -222,7 +218,7 @@ const ServiceDetail = () => {
             treatment: "A natural approach to treating gallstones, kidney infections, and related conditions using homeopathic remedies and lifestyle changes.",
             doctorInfo: "Dr. Priyanka Maurya provides holistic treatment for gallbladder and kidney diseases, focusing on natural healing methods.",
             serviceUrl: "gall-kidney",
-            image:gallkidney
+            image: gallkidney
         },
         {
             serviceName: "Urology",
@@ -236,7 +232,7 @@ const ServiceDetail = () => {
             treatment: "Natural remedies to treat urological disorders, including homeopathic solutions for UTIs, kidney stones, and prostate health.",
             doctorInfo: "Dr. Priyanka Maurya offers personalized care for urological issues, providing safe and effective treatment options without harsh medications.",
             serviceUrl: "urology",
-            image:urology
+            image: urology
         },
         {
             serviceName: "Dental Problems",
@@ -250,7 +246,7 @@ const ServiceDetail = () => {
             treatment: "Homeopathic and natural remedies for oral health, focusing on preventing and treating cavities, gum disease, and improving overall dental hygiene.",
             doctorInfo: "Dr. Priyanka Maurya offers specialized dental treatments using natural methods to promote long-term oral health and hygiene.",
             serviceUrl: "dental-problems",
-            image:dental
+            image: dental
         },
         {
             serviceName: "Cardiac Complaints",
@@ -264,9 +260,9 @@ const ServiceDetail = () => {
             treatment: "Holistic treatments to support heart health, including homeopathy, diet management, and lifestyle changes to reduce the risk of cardiovascular disease.",
             doctorInfo: "Dr. Priyanka Maurya specializes in treating cardiac complaints using natural therapies to improve heart health and manage symptoms effectively.",
             serviceUrl: "cardiac-complaints",
-            image:cardiac
+            image: cardiac
         }
-    ];
+    ]
 
 
     useEffect(() => {
@@ -280,6 +276,19 @@ const ServiceDetail = () => {
 
         }
     }, [location]);
+
+    // Scroll to top on component mount
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+
+
+    const breadcrumbItems = [
+        { label: 'Home', href: '/' },
+        { label: 'Service', href: '/service' },
+        { label: `${activeService?.serviceName}`}
+    ];
 
 
 
@@ -296,35 +305,45 @@ const ServiceDetail = () => {
                     <ul className="space-y-2">
                         {services.map((service) => (
                             <Link to={service?.serviceUrl}>
-                            <li
-                                key={service.id}
-                                className={`flex items-center py-3 px-1 gap-4 cursor-pointer rounded-lg transition duration-300 border border-[#808080] hover:bg-[#808080] z-10 relative bg-gray-100`} >
-                                <div
-                                    className="absolute inset-0 block"
-                                    style={{
-                                        backgroundImage: `url(${pattern})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                        opacity: 6,
-                                        zIndex: -10,
-                                    }}
-                                ></div>
-                                {/* <span className="mr-2 text-xl">{service.icon}</span> */}
-                                <img src={service?.image1} alt="service.name" className='w-10 h-10 object-cover' />
-                                <span>{service.name}</span>
-                            </li>
+                                <li
+                                    key={service.id}
+                                    className={`flex items-center py-3 px-1 gap-4 cursor-pointer rounded-lg transition duration-300 border border-[#808080] hover:bg-[#808080] z-10 relative bg-gray-100`} >
+                                    <div
+                                        className="absolute inset-0 block"
+                                        style={{
+                                            backgroundImage: `url(${pattern})`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center',
+                                            opacity: 6,
+                                            zIndex: -10,
+                                        }}
+                                    ></div>
+                                    {/* <span className="mr-2 text-xl">{service.icon}</span> */}
+                                    <img src={service?.image1} alt="service.name" className='w-10 h-10 object-cover' />
+                                    <span>{service.name}</span>
+                                </li>
                             </Link>
                         ))}
                     </ul>
-                    <div
-                        className="w-full bg-primary text-white rounded-lg shadow-lg p-6 mx-auto mt-8 relative overflow-hidden bg-cover bg-center"
-                        style={{ backgroundImage: `url(${background}')` }}
-                    >
-                        {/* Overlay to improve readability */}
-                        <div className="absolute inset-0 bg-primary opacity-70"></div>
-
-
+                    <div className="w-full bg-[#A6182E] text-white rounded-lg shadow-lg p-6 mx-auto mt-8 relative overflow-hidden bg-cover bg-center"
+                        style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}>
+                        <h4 className="text-2xl font-bold mb-2">How to Book An Appointment:</h4>
+                        <p className="text-gray-200 mb-4">
+                            For more information about our comprehensive treatment options, or to request an appointment with the
+                            <span className="font-bold"> best Homeopathy Doctor in Lucknow</span>, call
+                            <a href='tel:917667238292' className="font-bold"> +91-7667238292</a> or click on the button below for online booking.
+                        </p>
+                        <Link to="/contact">
+                            <button className="bg-white text-[#4A6F8F] px-6 py-3 rounded-lg font-semibold shadow-md ease-in-out duration-300 transition hover:bg-gray-200">
+                                Book Appointment
+                            </button>
+                        </Link>
+                        {/* Decorative Elements */}
+                        <div className="absolute -right-12 -top-12 w-40 h-40 bg-[#84b0d7] rounded-full opacity-50 transform rotate-45"></div>
+                        <div className="absolute -left-12 -bottom-12 w-40 h-40 bg-[#84b0d7] rounded-full opacity-50 transform rotate-45"></div>
                     </div>
+
+
 
 
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BreadCums from "../../component/BreadCums";
 
 const youtubeLinks = [
@@ -12,10 +12,23 @@ const youtubeLinks = [
   "https://www.youtube.com/embed/RepJs40tApI"
 ];
 
+
+
 const Video = () => {
+
+      // Scroll to top on component mount
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      const breadcrumbItems = [
+        { label: 'Home', href: '/' },
+        { label: 'Gallery' },
+        { label: 'gallery' },
+      ];
+
   return (
     <section>
-        <BreadCums headText={"Our Video"}/>
+        <BreadCums headText={"Our Video"} items={breadcrumbItems}/>
     <div className="max-w-7xl mx-auto px-4 py-10">
  
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

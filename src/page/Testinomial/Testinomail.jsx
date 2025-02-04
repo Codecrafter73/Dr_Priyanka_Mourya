@@ -15,10 +15,16 @@ function Testimonials() {
   useEffect(() => {
     window.scrollTo(0, 0);
      }, []);
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Testinomail' }
+];
+
   return (
     <div>
     
-      <BreadCums headText={"What Our Client Say"}/>
+      <BreadCums headText={"What Our Client Say"} items={breadcrumbItems}/>
 
       {loading && (
         <div className="w-full bg-slate-50 px-1  flex flex-wrap gap-4 justify-center">

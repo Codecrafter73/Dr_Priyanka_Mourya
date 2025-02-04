@@ -20,16 +20,16 @@ const YoutubeSlider = () => {
 
     return (
         <section className='py-10 bg-gray-100 relative z-10'>
-                 <div
-                            className="absolute inset-0 "
-                            style={{
-                                backgroundImage: `url(${pattern})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                                opacity: 0.4,
-                                zIndex: -10,
-                            }}
-                        ></div>
+            <div
+                className="absolute inset-0 "
+                style={{
+                    backgroundImage: `url(${pattern})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: 0.4,
+                    zIndex: -10,
+                }}
+            ></div>
 
             <h2 className='text-center mb-4'>Patient Feedback Video</h2>
             <div

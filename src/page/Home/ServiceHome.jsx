@@ -106,7 +106,7 @@ const ServiceHome = () => {
                         <div key={index} className="bg-white px-4 pt-4 pb-6  rounded-2xl shadow-lg flex flex-col items-center text-center cursor-pointer relative z-10 hover:border border-white">
 
                             <div
-                                className="absolute inset-0 hidden lg:block"
+                                className="absolute inset-0"
                                 style={{
                                     backgroundImage: `url(${bgImage})`,
                                     backgroundSize: 'cover',

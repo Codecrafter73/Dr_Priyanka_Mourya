@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
-import image from '../../assets/dr-priyanka/priyanka_2.jpg';
+import image from '../../assets/dr-priyanka/creative.png';
 
 import bgImage from '../../assets/pattern/pattern7.avif'
 import { FaUserMd } from 'react-icons/fa';
@@ -29,9 +29,9 @@ const Feature = () => {
        
                 <div className="lg:flex lg:items-start max-w-7xl  mx-auto ">
 
-                    <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center relative ">
+                    <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center relative  ">
                         <img
-                            className="w-[10rem] h-[10rem] object-cover lg:w-[28rem] lg:h-[28rem] rounded-xl"
+                            className="w-[10rem]  object-cover lg:w-[28rem] h-auto rounded-xl "
                             src={image}
                             alt="Healthcare services"
                         />

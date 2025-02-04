@@ -1,8 +1,9 @@
 import React from "react";
 
-import image from "../assets/dr-priyanka/appoit_dr2.jpg";
+import image from "../assets/dr-priyanka/ctadoctor.jpg";
 import { BiPhoneCall } from "react-icons/bi";
 import pattern from '../assets/pattern/pattern7.avif'
+import { Link } from "react-router-dom";
 
 const ContactCta = () => {
   return (
@@ -36,13 +37,13 @@ const ContactCta = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a
                 href="tel:917667238292"
-                className="flex items-center justify-center gap-2 text-lg font-semibold bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-md transition"
+                className="flex items-center justify-center gap-2 text-lg font-semibold bg-primary  hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-md transition"
               >
                 <BiPhoneCall className="w-5 h-5" /> Call Now: +91 7667238292
               </a>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+              <Link to={"/contact"} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">
                 Book Appointment
-              </button>
+              </Link>
             </div>
           </div>
           {/* Right Image */}

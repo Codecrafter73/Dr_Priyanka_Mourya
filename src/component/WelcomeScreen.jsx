@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { FaHeartbeat, FaStethoscope, FaUserMd } from 'react-icons/fa';
-import doctorImage from '../assets/dr-priyanka/welcome_dr.jpg';
+import doctorImage from '../assets/dr-priyanka/welcomedr.jpeg';
 
 // Keyframes for animations
 const fadeInUp = keyframes`

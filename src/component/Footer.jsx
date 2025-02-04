@@ -2,6 +2,7 @@ import React from 'react';
 import cclogo from '../assets/logo/cclogo.png';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Footer = () => {
     return (
@@ -11,43 +12,90 @@ const Footer = () => {
                     <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-4 gap-y-8 py-8 border-b-2 border-gray-700">
                         <div>
                             <h6 className="text-[1.5rem] font-semibold text-white mb-4">Quick Links</h6>
-                            <ul className="flex flex-col gap-[0.2rem]">
-                                <li><Link to="/" className="text-[16px] font-normal text-gray-400 hover:text-violet-400">Home</Link></li>
-                                <li><Link to="/about" className="text-[16px] font-normal text-gray-400 hover:text-violet-400">About Us</Link></li>
-                                <li><Link to="/cases" className="text-[16px] font-normal text-gray-400 hover:text-violet-400">Cases</Link></li>
-                                <li><Link to="/testimonials" className="text-[16px] font-normal text-gray-400 hover:text-violet-400">Testimonials</Link></li>
-                                <li><Link to="/blog" className="text-[16px] font-normal text-gray-400 hover:text-violet-400">Blog</Link></li>
-                                <li><Link to="/contact" className="text-[16px] font-normal text-gray-400 hover:text-violet-400">Contact Us</Link></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h6 className="text-[1.5rem] font-semibold text-white mb-4">Our Services</h6>
-                            <ul>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/obs-gynecology" className="hover:text-gray-300">Obs & Gynecology</Link>
-                                </li>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/nervous-disorders" className="hover:text-gray-300">Nervous Disorder</Link>
-                                </li>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/pediatrics" className="hover:text-gray-300">Pediatrics</Link>
-                                </li>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/tb-chest-diseases" className="hover:text-gray-300">TB & Chest</Link>
-                                </li>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/orthopedics" className="hover:text-gray-300">Orthopedics</Link>
-                                </li>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/ear-nose-throat" className="hover:text-gray-300">Ear, Nose & Throat</Link>
-                                </li>
-                                <li className="text-[16px] font-normal text-gray-400">
-                                    <Link to="/service/gall-kidney" className="hover:text-gray-300">Gallbladder & Kidney</Link>
-                                </li>
+                            <ul className="flex flex-col">
+                                {[
+                                    { to: "/", label: "Home" },
+                                    { to: "/about/dr-priyanka", label: "About Us" },
+                                    { to: "/about/politics", label: "Mahila Ayog" },
+                                    { to: "/testimonials", label: "Testimonials" },
+                                    { to: "/gallery/photo", label: "Gallery" },
+                                    { to: "/contact", label: "Contact Us" },
+                                ].map((item, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            to={item.to}
+                                            className="flex items-center gap-0 text-[16px] font-normal text-gray-400 hover:text-violet-400 transition"
+                                        >
+                                            <MdKeyboardArrowRight className="text-lg" />
+                                            <span>{item.label}</span>
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
 
                         </div>
                         <div>
+                            <h6 className="text-[1.5rem] font-semibold text-white mb-4">Our Services</h6>
+                            <ul>
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/obs-gynecology" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>Obs & Gynecology</span>
+                                    </Link>
+                                </li>
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/nervous-disorders" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>Nervous Disorder</span>
+                                    </Link>
+                                </li>
+
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/pediatrics" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>Pediatrics</span>
+                                    </Link>
+                                </li>
+
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/tb-chest-diseases" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>TB & Chest</span>
+                                    </Link>
+                                </li>
+
+                                {/* <li className="text-[16px] font-normal text-gray-400">
+                                    <Link to="/service/tb-chest-diseases" className="hover:text-gray-300">TB & Chest</Link>
+                                </li> */}
+                                {/* <li className="text-[16px] font-normal text-gray-400">
+                                    <Link to="/service/orthopedics" className="hover:text-gray-300">Orthopedics</Link>
+                                </li>
+                                 */}
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/orthopedics" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>Orthopedics</span>
+                                    </Link>
+                                </li>
+
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/ear-nose-throat" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>Ear, Nose & Throat</span>
+                                    </Link>
+                                </li>
+
+                                <li className="flex items-center text-[16px] font-normal text-gray-400 w-fit  rounded-md hover:text-gray-300 hover:border-red-400 transition">
+                                    <Link to="/service/gall-kidney" className="flex items-center">
+                                        <MdKeyboardArrowRight className="text-lg" />
+                                        <span>Gallbladder & Kidney</span>
+                                    </Link>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div className=''>
                             <h6 className="text-[1.5rem] font-semibold text-white mb-4">Contact Us</h6>
                             <ul className="flex flex-col gap-[0.2rem]">
                                 <li className="text-[16px] font-normal text-gray-400 flex items-center gap-2">
@@ -56,7 +104,7 @@ const Footer = () => {
                                 <li className="text-[16px] font-normal text-gray-400 flex items-center gap-2">
                                     <FaPhoneAlt /> +91 7667238292
                                 </li>
-                                <li className="text-[16px] font-normal text-gray-400 flex items-center gap-2">
+                                <li className="text-[16px] font-normal text-gray-400 flex items-start gap-2">
                                     <FaMapMarkerAlt /> LDA Colony, Lucknow, India, Uttar Pradesh
                                 </li>
                             </ul>
@@ -74,9 +122,9 @@ const Footer = () => {
                     </div>
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center">
                         <p className="text-center text-sm sm:text-base font-normal mb-2 sm:mb-0 sm:mr-4 text-white">
-                            Copyright © 2024 <span className="font-semibold text-white">Dr. Priyanka Maurya</span> || All Rights Reserved ||
+                            Copyright © 2025<span className="font-semibold text-white">Dr. Priyanka Maurya</span>||All Rights Reserved ||
                         </p>
-                        <a href="https://www.codecrafter.co.in/" target="_blank" rel="noopener noreferrer" className="flex items-center text-base font-normal text-gray-400 space-x-2">
+                        <a href="https://www.codecrafter.co.in/" target="_blank" rel="noopener noreferrer" className="flex items-center text-base font-normal text-gray-400">
                             <span className='text-base text-white'>Developed By:</span>
                             <img src={cclogo} alt="Code Crafter Web Solutions" className="w-32 sm:w-[8rem] h-auto object-contain" />
                         </a>

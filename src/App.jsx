@@ -21,6 +21,9 @@ import AboutPriyanka from './page/About/About-Priyanka'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Video from './page/Gallery/Video'
+import BlogDetail from './page/Blog/BlogDetail'
+import Header1 from './component/Header1'
+import SocialMediaIcons from './component/SocailMedia'
 
 
 const App = () => {
@@ -39,7 +42,8 @@ const App = () => {
       {false ? <SplashScreen/> : (
         <>
       {/* <TopHeader/> */}
-      <Header/>
+      <Header1/>
+      {/* <Header/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about/politics" element={<About_Politics/>} />
@@ -50,8 +54,10 @@ const App = () => {
           <Route path="/gallery/photo" element={<Photo/>} />
           <Route path="/gallery/video" element={<Video/>} />
           <Route path="/service/:name" element={<ServiceDetail/>} />
+          <Route path="/blog/:name" element={<BlogDetail/>} />
         </Routes>
       <Footer/>
+      <SocialMediaIcons/>
       {/* <BottomFooter/> */}
       </>
       )      
