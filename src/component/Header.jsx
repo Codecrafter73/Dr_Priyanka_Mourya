@@ -237,7 +237,7 @@ const Header = () => {
     return (
         <div>
             {isOpen && <div className="fixed inset-0 bg-[#00072c] opacity-70 z-40" onClick={() => setIsOpen(false)}></div>}
-            <div className='flex items-start xl:justify-between  mx-auto '>
+            <div className='flex items-start xl:justify-between  mx-auto border  '>
                 <div className='mx-auto '>
                     <Link to="/">
                         <img src={logo} alt="Dr.Priyanka Logo" className='w-[6rem] md:w-[8rem] sm:w-[7rem] lg:w-[8rem] xl:w-[9rem] h-auto object-cover ' />

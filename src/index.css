@@ -13,7 +13,9 @@ body {
  
   .bg-primary {
     background-color: #A6182E;
+    
   }
+  
 
   h1 {
     font-weight: 900;
@@ -88,7 +90,7 @@ body {
       font-size: 2.5rem; /* Laptops and desktops */
     }
     h2 {
-      font-size: 2.3rem;
+      font-size: 2.1rem;
     }
   }
   

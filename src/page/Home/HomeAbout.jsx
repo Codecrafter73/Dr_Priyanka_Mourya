@@ -27,7 +27,7 @@ const HomeAbout = () => {
     const navigate=useNavigate()
 
     return (
-        <section className="relative bg-gray-100 z-10">
+        <section className="relative bg-gray-100 z-10 py-10 sm:py-12 md:py-14 lg:py-16">
             <div
                 className="absolute inset-0 "
                 style={{
@@ -39,10 +39,10 @@ const HomeAbout = () => {
                 }}
             ></div>
             <div>
-                <div className="relative flex flex-col lg:flex-row justify-items-start gap-[2rem] p-6 lg:gap-20 max-w-7xl mx-auto">
+                <div className="relative flex flex-col lg:flex-row justify-items-start gap-[2rem]  lg:gap-20 max-w-7xl mx-auto">
 
-                    <div className="flex-1 z-10 space-y-6 lg:space-y-6 lg:flex-grow" data-aos="fade-right">
-                        <div className='flex flex-col gap-2'>
+                    <div className="flex-1 z-10 space-y-6 lg:space-y-3 lg:flex-grow px-10" data-aos="fade-right">
+                        <div className='lg:text-[1.8rem] '>
                             <h2>About Dr. Priyanka Maurya</h2>
                             <h1 className="font-bold text-gray-800">
                                 Renowned Social Worker and Homeopathy Doctor
@@ -52,6 +52,7 @@ const HomeAbout = () => {
                         <p className="text-base text-gray-600 leading-relaxed text-justify">
                             <strong>Dr. Priyanka Maurya</strong>, a famous <strong>homeopathic physician, social worker and BJP leader</strong>, has been appointed by the <strong>Yogi Adityanath</strong> Government of Uttar Pradesh to be a member of its Women Commission. Known for being the face of the Congress campaign <strong>"Ladki Hoon, Lad Sakti Hoon" </strong>during the 2022 assembly elections, Dr. Maurya now begins this new chapter in her journey with the political service for the BJP. Her appointment underscores her endless efforts towards women's empowerment and impactful contributions to social causes across Uttar Pradesh.
                         </p>
+
                         <p className="text-base text-gray-600 leading-relaxed text-justify">
                             A postgraduate with more than <strong>10 years of experience </strong>in social service, Dr. Maurya has been associated with initiatives like <strong>"Neki Ki Deewar" and "Roti Bank,"</strong> focusing on helping the underprivileged. She is also a National Vice President of the Shambhuka Foundation and has led several drug awareness programs across Uttar Pradesh. During the COVID-19 pandemic, she offered free medical consultations to thousands and organized numerous health campaigns, earning prestigious awards such as the <strong>Women of Excellence in 2020 and the RedFM Achievers Award in 2021</strong>.
                         </p>

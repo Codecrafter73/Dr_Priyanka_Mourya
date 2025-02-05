@@ -238,7 +238,7 @@ const Header1 = () => {
     <header className="top-0 w-full z-50 relative">
      
       {/* Top Bar with Email & Phone (Right Side) */}
-      <div className="flex items-center justify-between bg-white text-gray-800  text-sm font-medium relative z-10">
+      <div className="flex items-end justify-end bg-white text-gray-800  text-sm font-medium relative z-10  ">
 
     
         {/* Left Side (White Background) */}
@@ -246,7 +246,13 @@ const Header1 = () => {
 
 
         {/* Right Side (Red Background) */}
-        <div className="bg-[#A6182E] hidden text-white sm:w-[75%] w-[55%] sm:py-2 rounded-l-full sm:flex items-end justify-end sm:px-6 xl:px-8">
+        <div className="bg-[#A6182E] hidden  text-white sm:py-2 rounded-bl-full sm:flex items-start justify-between   w-[70%]  px-[2rem]">
+        <div className="flex items-start gap-6 ">
+        <a href="tel:917667238292"> 📞+91 7667238292</a>
+          <a href="melto:priyankamaurya27@gmail.com">📧 priyankamaurya27@gmail.com </a>
+      
+
+          </div>
           <Link to="/about/politics" className={`relative  xl:hidden transition-all duration-300 hidden md:block hover:text-primary md:pr-4 ${location.pathname === '/' ? 'text-primary' : ''}`}>
             Rajya Mahila Ayog
             {location.pathname === '/about/politics' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
@@ -259,9 +265,8 @@ const Header1 = () => {
             Contact Us
             {location.pathname === '/contact' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
           </Link>
-          <a href="melto:priyankamaurya27@gmail.com">📧 priyankamaurya27@gmail.com </a>
-          <a href="tel:917667238292"> |  📞+91 7667238292</a>
-
+      
+    
 
           {/* Social Media Icons Section */}
           <div className="items-center gap-3 xl:flex hidden xl:px-4 ">

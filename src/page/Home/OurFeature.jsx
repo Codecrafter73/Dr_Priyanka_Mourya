@@ -49,7 +49,7 @@ const Feature = () => {
 
                     <div className="max-w-7xl space-y-6 lg:w-1/2 px-4 sm:px-6 md:px-8 lg:px-2 ">
                         <div>
-                            <h2 className="mb-2">Why Choose Us</h2>
+                            <h2 className="">Why Choose Us</h2>
                             <h1 className="">
                                 Dr. Priyanka – Best Homeopathic Doctor in Lucknow
                             </h1>
@@ -64,7 +64,7 @@ const Feature = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                     </svg>
                                 </span>
-                                <div className="mt-4 ">
+                                <div className="mt-1 ">
                                     <h3 className="font-semibold text-main capitalize text-xl color-primary !important">
                                     Holistic Treatment
                                     </h3>
@@ -82,7 +82,7 @@ const Feature = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                                     </svg>
                                 </span>
-                                <div className="mt-4 md:mx-4 md:mt-4">
+                                <div className="mt-1 md:mx-4 md:mt-1">
                                     <h3 className="text-xl font-semibold color-primary  capitalize ">
                                     Natural & Safe Remedies
                                     </h3>
@@ -101,7 +101,7 @@ const Feature = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                                     </svg>
                                 </span>
-                                <div className="mt-4 ">
+                                <div className="mt-1">
                                     <h3 className="font-semibold text-main capitalize text-xl color-primary !important">
                                        Experienced Practitioner
                                     </h3>
@@ -119,7 +119,7 @@ const Feature = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                                     </svg>
                                 </span>
-                                <div className="mt-4 md:mx-4 md:mt-4">
+                                <div className="mt-1 md:mx-4 md:mt-1">
                                     <h3 className="text-xl font-semibold color-primary  capitalize ">
                                     Patient-Centric Approach
                                     </h3>
