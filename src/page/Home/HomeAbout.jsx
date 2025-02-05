@@ -39,7 +39,7 @@ const HomeAbout = () => {
                 }}
             ></div>
             <div>
-                <div className="relative flex flex-col lg:flex-row justify-items-start gap-[5rem] p-6 lg:gap-20 max-w-7xl mx-auto">
+                <div className="relative flex flex-col lg:flex-row justify-items-start gap-[2rem] p-6 lg:gap-20 max-w-7xl mx-auto">
 
                     <div className="flex-1 z-10 space-y-6 lg:space-y-6 lg:flex-grow" data-aos="fade-right">
                         <div className='flex flex-col gap-2'>
@@ -56,7 +56,7 @@ const HomeAbout = () => {
                             A postgraduate with more than <strong>10 years of experience </strong>in social service, Dr. Maurya has been associated with initiatives like <strong>"Neki Ki Deewar" and "Roti Bank,"</strong> focusing on helping the underprivileged. She is also a National Vice President of the Shambhuka Foundation and has led several drug awareness programs across Uttar Pradesh. During the COVID-19 pandemic, she offered free medical consultations to thousands and organized numerous health campaigns, earning prestigious awards such as the <strong>Women of Excellence in 2020 and the RedFM Achievers Award in 2021</strong>.
                         </p>
 
-                        <Button text={"Know More"} url="/" />
+                        <Button text={"Know More"} url="/about/dr-priyanka" />
                     </div>
 
                     <div className="flex-none z-10 flex flex-col items-center lg:items-start lg:w-[35%]" data-aos="fade-left">

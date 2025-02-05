@@ -22,7 +22,7 @@ const BjpAbout = () => {
           /> */}
             <video
               data-aos="fade-up"
-              className="object-cover h-[40rem] w-full"
+              className="object-cover h-[40rem] w-full px-4"
               src={video}
               autoPlay
               loop
@@ -32,7 +32,7 @@ const BjpAbout = () => {
           </div>
 
           {/* Right Side - Content */}
-          <div className="w-full lg:w-2/3 px-6 lg:px-8 text-[#201654] space-y-6 ">
+          <div className="w-full lg:w-2/3 px-4 lg:px-8 text-[#201654] space-y-6 ">
             <div className='flex items-end h-fit gap-6'>
               <img src={logo} alt="bjplogo" className='w-30 h-30 object-cover' />
               <h4 className="text-xl font-semibold text-[#A6182E] xl:text-end text-center ">"Meet Dr. Priyanka Maurya" - BJP Socail Worker</h4>

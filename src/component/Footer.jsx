@@ -18,7 +18,7 @@ const Footer = () => {
                                     { to: "/about/dr-priyanka", label: "About Us" },
                                     { to: "/about/politics", label: "Mahila Ayog" },
                                     { to: "/testimonials", label: "Testimonials" },
-                                    { to: "/gallery/photo", label: "Gallery" },
+                                    { to: "/gallery/photo", label: "Gallery Photo" },
                                     { to: "/contact", label: "Contact Us" },
                                 ].map((item, index) => (
                                     <li key={index}>

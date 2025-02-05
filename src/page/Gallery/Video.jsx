@@ -23,7 +23,7 @@ const Video = () => {
       const breadcrumbItems = [
         { label: 'Home', href: '/' },
         { label: 'Gallery' },
-        { label: 'gallery' },
+        { label: 'Video' },
       ];
 
   return (

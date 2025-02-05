@@ -22,7 +22,7 @@ const WomenSocialLeaderShip = () => {
                     zIndex: -10,
                 }}
             ></div>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto px-4">
                 <div className="flex  flex-col-reverse lg:flex-row-reverse items-center lg:items-start  rounded-xl overflow-hidden">
                     {/* Left Side - Image */}
                     <div className="w-full lg:w-1/2 ">
@@ -39,7 +39,7 @@ const WomenSocialLeaderShip = () => {
                     </div>
 
                     {/* Right Side - Content */}
-                    <div className="w-full lg:w-2/3 px-6 lg:px-8 text-[#201654] space-y-6 ">
+                    <div className="w-full lg:w-2/3 lg:px-8 text-[#201654] space-y-6 ">
                         <div className='flex items-end h-fit gap-6'>
                             <img src={logo} alt="bjplogo" className='w-30 h-30 object-cover' />
                             <h4 className="text-xl font-semibold text-[#A6182E] text-end text-justify">"नारी शक्ति: बदलाव की नई लहर"</h4>

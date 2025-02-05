@@ -50,7 +50,7 @@ const Photo = () => {
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     { label: 'Gallery' },
-    { label: 'gallery' },
+    { label: 'Photo' },
   ];
 
   const images = [

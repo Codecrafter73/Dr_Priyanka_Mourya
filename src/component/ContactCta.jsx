@@ -31,10 +31,10 @@ const ContactCta = () => {
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
               Need Emergency Assistance?
             </h2>
-            <p className="text-lg text-gray-700 mb-6 text-justify">
+            <p className="text-lg text-gray-700 lg:mb-6 mb-2 text-justify">
               If you require urgent medical attention or need to book an appointment, contact us immediately.
             </p>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row lg:items-center items-start gap-4">
               <a
                 href="tel:917667238292"
                 className="flex items-center justify-center gap-2 text-lg font-semibold bg-primary  hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow-md transition"

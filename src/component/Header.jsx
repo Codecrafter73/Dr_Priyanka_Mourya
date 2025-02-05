@@ -245,7 +245,7 @@ const Header = () => {
                 </div>
 
 
-                <div className='h-full'>
+                <div className=''>
                     <div className="bg-primary text-white py-0 xl:py-1 shadow-lg p-2">
                         <div className="xl:max-w-full mx-auto  flex flex-col md:flex-row px-2  items-center gap-2 md:gap-4">
                             {/* Contact Info Section */}

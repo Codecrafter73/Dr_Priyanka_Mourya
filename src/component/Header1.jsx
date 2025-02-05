@@ -7,6 +7,7 @@ import { FaSquareThreads } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdArrowDropUp } from "react-icons/md";
+import pattern from '../assets/pattern/pattern2.avif'
 
 const Header1 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -235,8 +236,11 @@ const Header1 = () => {
 
   return (
     <header className="top-0 w-full z-50 relative">
+     
       {/* Top Bar with Email & Phone (Right Side) */}
-      <div className="flex items-center justify-between bg-white text-gray-800  text-sm font-medium">
+      <div className="flex items-center justify-between bg-white text-gray-800  text-sm font-medium relative z-10">
+
+    
         {/* Left Side (White Background) */}
         <span className="text-gray-800"></span>
 
@@ -248,40 +252,50 @@ const Header1 = () => {
             {location.pathname === '/about/politics' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
           </Link>
           <Link
-              to="/contact"
-              className={`relative transition-all duration-300 xl:hidden hover:text-primary md:pr-4 hidden md:block ${location.pathname === '/contact' ? 'text-primary' : ''}`}
-              style={{ whiteSpace: 'nowrap' }}
-            >
-              Contact Us
-              {location.pathname === '/contact' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
-            </Link>
-            <a href="melto:priyankamaurya27@gmail.com">📧 priyankamaurya27@gmail.com </a>
-            <a href="tel:917667238292">| 📞 +91 7667238292</a>
-          
+            to="/contact"
+            className={`relative transition-all duration-300 xl:hidden hover:text-primary md:pr-4 hidden md:block ${location.pathname === '/contact' ? 'text-primary' : ''}`}
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            Contact Us
+            {location.pathname === '/contact' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+          </Link>
+          <a href="melto:priyankamaurya27@gmail.com">📧 priyankamaurya27@gmail.com </a>
+          <a href="tel:917667238292"> |  📞+91 7667238292</a>
 
-                {/* Social Media Icons Section */}
-                <div className="items-center gap-3 xl:flex hidden xl:px-4 ">
-                                    {socialLinks.map((link, index) => (
-                                        <a
-                                            key={index}
-                                            href={link.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className={`text-white w-6 h-6 flex items-center justify-center rounded-full ${link.color} hover:opacity-80`}
-                                            aria-label="Social Media Link"
-                                        >
-                                            {link.icon}
-                                        </a>
-                                    ))}
-                                </div>
+
+          {/* Social Media Icons Section */}
+          <div className="items-center gap-3 xl:flex hidden xl:px-4 ">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-white w-6 h-6 flex items-center justify-center rounded-full ${link.color} hover:opacity-80`}
+                aria-label="Social Media Link"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
 
         </div>
 
       </div>
 
       {/* Navbar */}
-      <div className="bg-white shadow-md relative">
-        <div className="container mx-auto flex items-center justify-between px-4 lg:px-8 py-3 relative">
+      <div className="bg-white shadow-md relative z-10">
+      <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${pattern})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.6,
+            zIndex: -10,
+          }}
+        ></div>
+        <div className=" mx-auto flex items-center justify-between px-4  py-3 relative   bg-[#FAFAFA] rounded-full rounded-tr-full ">
           {/* Logo */}
           <Link to="/" className="absolute left-[6rem] -translate-x-1/2 md:-top-9 sm:top-[-2.2rem] top-0 ">
             <img
@@ -292,7 +306,7 @@ const Header1 = () => {
           </Link>
 
           {/* Desktop Navigation - Right Side */}
-          <nav className="hidden lg:flex items-center space-x-6 text-lg font-medium text-gray-800 ml-auto">
+          <nav className="hidden lg:flex items-center space-x-6 text-lg font-medium pl-16 text-gray-800 ml-auto  ">
             <Link to="/" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`}>
               Home
               {location.pathname === '/' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
@@ -479,24 +493,167 @@ const Header1 = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 w-64 bg-gray-50 shadow-lg transform ${isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 z-50`}
+        className={`${isOpen ? 'translate-x-0' : '-translate-x-full'
+          } fixed left-0 top-0 h-full w-64 bg-white z-50 shadow-lg transition-transform duration-300 ease-in-out`}
+        style={{ overflowY: 'auto' }} // Enable sidebar scrolling
       >
-        <div className="flex justify-between items-center p-4 border-b">
-          <span className="text-lg font-semibold text-gray-800">Menu</span>
-          <button onClick={toggleMenu} className="text-gray-700">
-            <FiX className="w-6 h-6" />
+        <div className="flex justify-between items-center p-5 border-b">
+          <span className="text-lg font-semibold">Menu</span>
+          <button onClick={toggleMenu} className="text-gray-700 focus:outline-none">
+            <FiX className="w-8 h-8" />
           </button>
         </div>
-
-        <div className="p-6 space-y-4 text-lg font-medium text-gray-700">
-          <NavLink to="/" className="block hover:text-[#A6182E]" onClick={toggleMenu}>
+        <div className="p-6 flex flex-col gap-4 text-lg font-medium text-gray-700">
+          <Link to="/" className="block hover:text-teal-600" onClick={toggleMenu}>
             Home
-          </NavLink>
-          <NavLink to="/cases" className="block hover:text-[#A6182E]" onClick={toggleMenu}>
-            Cases
-          </NavLink>
-          <NavLink to="/contact" className="block hover:text-[#A6182E]" onClick={toggleMenu}>
+          </Link>
+
+
+          <Link to="/about/dr-priyanka" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`} onClick={toggleMenu}>
+            About Dr. Priyanka Maurya
+            {location.pathname === '/about/dr-priyanka' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+          </Link>
+
+          <Link to="/about/politics" className={`relative   transition-all duration-300 hover:text-primary md:pr-4 ${location.pathname === '/' ? 'text-primary' : ''}`} onClick={toggleMenu}>
+            Rajya Mahila Ayog
+            {location.pathname === '/about/politics' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+          </Link>
+
+
+
+          <div
+            className="relative"
+            onClick={() => setActiveAbout(!activeAbout)}
+            onMouseEnter={() => setActiveAbout(!activeAbout)}
+            onMouseLeave={() => {
+              setTimeout(() => {
+                if (!activeDropdown) setActiveAbout(null);
+              }, 200); // Delay hiding the dropdown
+            }}
+          >
+            <button
+              className={`flex items-center gap-1 transition-all duration-300 hover:text-primary ${activeAbout === 'about' ? 'text-primary' : ''}`}
+            >
+              Gallery <IoMdArrowDropdown />
+            </button>
+
+            {/* Dropdown Menu */}
+            {activeAbout && (
+              <div className="absolute left-0 bg-white shadow-lg text-[0.9rem] rounded-lg w-[14rem] py-2 z-50 border border-gray-300 transition-transform duration-300 ease-in-out transform-gpu">
+                {aboutItems.map((treatment) => (
+                  <div
+                    key={treatment.name}
+                    className="border-b relative"
+                    onMouseEnter={() => setActiveSubDropdown(treatment.name)}
+                    onMouseLeave={() => setActiveSubDropdown(null)}
+                  >
+                    <button
+                      className="flex justify-between items-center w-full px-2 py-2 hover:bg-gray-100"
+
+                      onClick={() => {
+                        if (treatment.hasSubItems) {
+                          setActiveSubDropdown(treatment.name); // Show sub-items if available
+                          toggleMenu()
+                        } else {
+                          // Navigate to the treatment page directly if no sub-items
+                          window.location.href = treatment.path; // Or use history.push if using react-router
+                        }
+                      }}
+                    >
+                      {treatment.name}
+                      {treatment.hasSubItems && <IoMdArrowDropright />} {/* Only show icon if there are sub-items */}
+                    </button>
+
+                    {activeSubDropdown === treatment.name && treatment.hasSubItems && (
+                      <div className="absolute left-full top-0 bg-white shadow-lg rounded-lg w-48 z-50">
+                        {treatment.subItems.map((subItem, index) => (
+                          <Link
+                            key={subItem.name}
+                            to={subItem.path}
+                            className={`block px-4 py-2 hover:bg-gray-200 ${index !== treatment.subItems.length - 1 ? 'border-b border-gray-300' : ''}`}
+                            onClick={() => {
+                              setActiveDropdown(null); // Close main dropdown on click
+                              setActiveSubDropdown(null); // Close sub-dropdown on click
+                            }}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div>
+            <button
+              className={`flex items-center gap-1 transition-all duration-300 hover:text-primary ${activeDropdown ? 'text-primary' : ''}`}
+              style={{ whiteSpace: 'nowrap' }}
+              onClick={() => handletoogleTreatment()}
+            >
+              Our Service <IoMdArrowDropdown />
+            </button>
+          </div>
+
+          {toogleTreatment && (
+            <div className="space-y-4">
+              {treatments.map((treatment, index) => (
+                <div key={treatment.name} className="border-b pb-2">
+                  <button
+                    onClick={() => {
+                      // If treatment has no subItems, navigate directly to its path
+                      if (!treatment.hasSubItems) {
+                        navigate(treatment.path); // Replace with your navigation method
+                        toggleMenu()
+                      } else {
+                        toggleDropMobiledown(index); // Toggle dropdown if it has subItems
+                        toggleMenu()
+                      }
+                    }}
+                    className="w-full text-left  hover:text-teal-600 flex items-center justify-between"
+                  >
+                    <span>{treatment.name}</span>
+                    {/* Show plus/minus sign only for items with subItems */}
+                    {treatment.hasSubItems && (
+                      <>
+                        {openDropdown === index ? <FiMinus className="ml-2" /> : <FiPlus className="ml-2" />}
+                      </>
+                    )}
+                  </button>
+
+                  {/* Submenu */}
+                  {openDropdown === index && treatment.hasSubItems && (
+                    <div className="ml-4 space-y-2 mt-2">
+                      {treatment.subItems.map((subItem) => (
+                        <NavLink
+                          key={subItem.path}
+                          to={subItem.path}
+                          className="block hover:text-teal-600"
+                          onClick={toggleMenu}
+                        >
+                          {subItem.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          <Link to="/testonomial" className={`relative transition-all duration-300 hover:text-primary ${location.pathname === '/testimonial' ? 'text-primary' : ''}`} onClick={toggleMenu} >
+            Testimonial
+            {location.pathname === '/testonomial' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
+          </Link>
+
+
+
+
+
+
+          <NavLink to="/contact" className="block hover:text-teal-600" onClick={toggleMenu}>
             Contact Us
           </NavLink>
         </div>
@@ -509,6 +666,8 @@ const Header1 = () => {
           onClick={toggleMenu}
         ></div>
       )}
+
+
     </header>
   );
 };

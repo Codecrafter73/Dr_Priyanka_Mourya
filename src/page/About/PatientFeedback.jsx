@@ -18,7 +18,7 @@ const FeedbackComponent=()=> {
     <div className="max-w-7xl mx-autorounded-2xl mx-auto">
       <h2 className="text-2xl font-bold  text-center">Patient Feedback</h2>
       <h1 className="text-center w-2/3 mx-auto mb-4">What Our Patient Says</h1>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-4 gap-4 px-4">
         {youtubeLinks.map((link, index) => (
           <div key={index} className="shadow-md rounded-lg">
             <iframe

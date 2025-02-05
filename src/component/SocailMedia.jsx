@@ -21,7 +21,7 @@ const SocialMediaIcons = () => {
         },
         {
             icon: <FaWhatsapp />,
-            url: `https://wa.me/918318208837?text=${encodeURIComponent("Hello, I need help!")}`, // Replace with your WhatsApp number
+            url: `https://wa.me/917667238292?text=${encodeURIComponent("Hello, I need help!")}`, // Replace with your WhatsApp number
             color: "bg-green-500", // WhatsApp green
         },
     ];
