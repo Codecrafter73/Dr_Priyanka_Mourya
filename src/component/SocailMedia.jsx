@@ -27,7 +27,7 @@ const SocialMediaIcons = () => {
     ];
 
     return (
-        <div className="fixed top-20 xl:hidden right-[0.2rem] flex flex-col space-y-4" style={{ zIndex: 1000 }}>
+        <div className="fixed top-20 xl:hidden right-[0.5rem] flex flex-col space-y-4 " style={{ zIndex: 1000 }}>
             {socialLinks.map((social, index) => (
                 <a 
                     key={index} 

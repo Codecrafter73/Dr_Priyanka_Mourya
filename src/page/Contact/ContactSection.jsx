@@ -73,10 +73,10 @@ const ContactForm = () => {
 
   return (
     <div className="relative w-full flex items-center justify-center lg:p-8 bg-gray-100 overflow-hidden">
-      <div className="grid md:grid-cols-2 w-full bg-white rounded-lg shadow-lg overflow-hidden max-w-7xl h-fit">
+      <div className="grid md:grid-cols-2 w-full bg-white rounded-lg shadow-lg overflow-hidden max-w-7xl h-fit px-4">
 
         {/* Contact Info Section */}
-        <div className=" md:max-w-[35rem] flex pt-6 px-4">
+        <div className=" md:max-w-[35rem] flex pt-6 ">
           <div>
             <h1 className="mb-6">
               Get In Touch With Us
@@ -100,7 +100,7 @@ const ContactForm = () => {
                   <MdContactPhone className="text-[1.4rem] text-white" />
                 </a>
                 <div>
-                  <h3 className="text-[#A6182E] text-[1.5rem] font-semibold ">Call for Help</h3>
+                  <h3 className="text-[#A6182E] text-[1.5rem] font-semibold ">Call for Inquiry </h3>
                   <a href="tel:917667238292" className="text-[#535760] text-[1rem]">
                     +91-7667238292
                   </a>
@@ -155,7 +155,7 @@ const ContactForm = () => {
         </div>
 
         {/* Form Section */}
-        <div className="p-4 bg-[#A6182E] text-white relative shadow-md rounded-lg mt-4 lg:mt-0">
+        <div className="p-4 bg-[#A6182E] text-white relative shadow-md rounded-lg mt-4 lg:mt-0 ">
           <form onSubmit={handleSubmit} className="space-y-6">
             <h3 className="text-xl sm:text-2xl font-semibold">Contact Us</h3>
 

@@ -107,7 +107,7 @@ const ServiceList = () => {
                                     backgroundImage: `url(${bgImage})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    opacity: 10,
+                                    opacity: 4,
                                     zIndex: -10,
                                 }}
                             ></div>

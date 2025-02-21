@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "../../component/Button";
-import video from '../../assets/bjp/bgvideo.mp4'
+
 import Aos from "aos";
 
 const BjpCTA = () => {

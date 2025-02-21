@@ -30,17 +30,12 @@ const Home = () => {
     <div className=''>
         <HomeSlider/>
         <HomeAbout/>
-        {/* <HomeService/> */}
         <ServiceHome/>
-        {/* <ClientStats/> */}
         <Feature/>
         <ContactCta/>
         <BjpPriyanka/>
-        {/* <BjpSocailWork/> */}
         <YouTubeSlider/>
         <SocialGallery/>
-        {/* <Feedback/> */}
-        <ReviewComponent/>
         <HomeBlog/>
         
 

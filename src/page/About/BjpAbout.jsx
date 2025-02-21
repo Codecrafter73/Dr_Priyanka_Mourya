@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../../assets/bjp/bjp1.jpg';
 import Button from '../../component/Button';
 import logo from '../../assets/bjp/bjplogo.png'
-import video from '../../assets/bjp/bgvideo.mp4'
+
 
 const BjpAbout = () => {
   return (
@@ -23,7 +23,7 @@ const BjpAbout = () => {
             <video
               data-aos="fade-up"
               className="object-cover h-[40rem] w-full px-4"
-              src={video}
+              src={"https://res.cloudinary.com/duaqq7maw/video/upload/v1740113740/bgvideo_zayc1j.mp4"}
               autoPlay
               loop
               muted

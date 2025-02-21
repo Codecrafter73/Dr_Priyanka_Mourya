@@ -8,6 +8,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { MdArrowDropUp } from "react-icons/md";
 import pattern from '../assets/pattern/pattern2.avif'
+import Translator from "./Translator";
 
 const Header1 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -487,6 +488,10 @@ const Header1 = () => {
               Contact Us
               {location.pathname === '/contact' && <span className="absolute left-0 right-0 bottom-[-3px] h-[2px] bg-primary"></span>}
             </Link>
+             
+             {/* <Translator/> */}
+      
+
           </nav>
 
           {/* Mobile Menu Button (Right Side) */}

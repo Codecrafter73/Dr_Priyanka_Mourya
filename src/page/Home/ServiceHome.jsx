@@ -13,6 +13,7 @@ import img10 from '../../assets/service/cardiac.jpg'
 import bgImage from '../../assets/pattern/pattern7.avif'
 import background from '../../assets/pattern/pattern8.avif'
 import { Link } from 'react-router-dom'
+import Translator from '../../component/Translator'
 
 
 const services = [
@@ -83,7 +84,7 @@ const services = [
 const ServiceHome = () => {
     return (
         <section className='py-10 sm:py-12 md:py-14 lg:py-16 relative z-10 bg-gray-100'>
-                        {/* <div
+            {/* <div
                 className="absolute inset-0 hidden lg:block"
                 style={{
                     backgroundImage: `url(${background})`,
@@ -99,27 +100,28 @@ const ServiceHome = () => {
                     <h1 className="font-bold text-gray-800  lg:w-1/2 w-full text-center mx-auto" >
                         Transforming Lives with best Homeopathic Services in Lucknow
                     </h1>
+                    {/* <Translator/> */}
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-4 mt-4">
                     {services.map((service, index) => (
                         <Link to={`${service?.serviceUrl}`}>
-                        <div key={index} className="bg-white px-4 pt-4 pb-6  rounded-2xl shadow-lg flex flex-col items-center text-center cursor-pointer relative z-10 hover:border border-white">
+                            <div key={index} className="bg-white px-4 pt-4 pb-6  rounded-2xl shadow-lg flex flex-col items-center text-center cursor-pointer relative z-10 hover:border border-white">
 
-                            <div
-                                className="absolute inset-0"
-                                style={{
-                                    backgroundImage: `url(${bgImage})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    opacity: 10,
-                                    zIndex: -10,
-                                }}
-                            ></div>
-                            <img src={service.image1} alt={service?.name} className="w-16 h-16 object-cover rounded-full mb-2  bg-white p-2  shadow-[#A6182E] shadow-2xl" />
-                            <p className="text-lg font-semibold text-gray-800">{service.name}</p>
-                            <p className="text-sm text-gray-600 mt-2">{service?.para}</p>
-                            <Link to={`${service?.serviceUrl}`} className='font-semibold text-[#1B3C74] justify-end mt-4 hover:text-[#A6182E] ease-in-out duration-300'>Explore More</Link>
-                        </div>
+                                <div
+                                    className="absolute inset-0"
+                                    style={{
+                                        backgroundImage: `url(${bgImage})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        opacity: 10,
+                                        zIndex: -10,
+                                    }}
+                                ></div>
+                                <img src={service.image1} alt={service?.name} className="w-16 h-16 object-cover rounded-full mb-2  bg-white p-2  shadow-[#A6182E] shadow-2xl" />
+                                <p className="text-lg font-semibold text-gray-800">{service.name}</p>
+                                <p className="text-sm text-gray-600 mt-2">{service?.para}</p>
+                                <Link to={`${service?.serviceUrl}`} className='font-semibold text-[#1B3C74] justify-end mt-4 hover:text-[#A6182E] ease-in-out duration-300'>Explore More</Link>
+                            </div>
                         </Link>
                     ))}
                 </div>

@@ -95,7 +95,7 @@ const Footer = () => {
                             </ul>
 
                         </div>
-                        <div className=''>
+                        <div className='w-full'>
                             <h6 className="text-[1.5rem] font-semibold text-white mb-4">Contact Us</h6>
                             <ul className="flex flex-col gap-[0.2rem]">
                                 <li className="text-[16px] font-normal text-gray-400 flex items-center gap-2">
@@ -105,7 +105,7 @@ const Footer = () => {
                                     <FaPhoneAlt /> +91 7667238292
                                 </li>
                                 <li className="text-[16px] font-normal text-gray-400 flex items-start gap-2">
-                                    <FaMapMarkerAlt /> LDA Colony, Lucknow, India, Uttar Pradesh
+                                    <FaMapMarkerAlt /> UGF3, Pratap Plaza, Sector B, LDA Colony, Lucknow, India, 226012
                                 </li>
                             </ul>
                         </div>

@@ -5,13 +5,13 @@ import pattern from '../../assets/pattern/pattern7.avif'
 import AboutFaq from "../../component/Faq";
 
 const timetable = [
-    { day: "Saturday", time: "10:30 am–1 pm, 6–8 pm" },
-    { day: "Sunday", time: "10:30 am–1 pm, 6–8 pm" },
     { day: "Monday", time: "10:30 am–1 pm, 6–8 pm" },
     { day: "Tuesday", time: "10:30 am–1 pm, 6–8 pm" },
     { day: "Wednesday", time: "10:30 am–1 pm, 6–8 pm" },
     { day: "Thursday", time: "Closed" },
     { day: "Friday", time: "10:30 am–1 pm, 6–8 pm" },
+    { day: "Saturday", time: "10:30 am–1 pm, 6–8 pm" },
+    { day: "Sunday", time: "Closed" },
 ];
 
 const DoctorTimetable = () => {

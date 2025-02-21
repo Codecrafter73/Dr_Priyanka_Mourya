@@ -1,15 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import visualizer from "rollup-plugin-visualizer"; // ❌ Wrong import
+// ❌ `visualizer` is not a function
 
-
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react() ,tailwindcss()],
-  //  server: {
-  //   host: "0.0.0.0", // Allows access from any IP address on the local network
-  //   port: 3000, // Port number
-  //   strictPort: true, // Prevents Vite from using a different port if the default is taken
-  // },
-  
-})
+  plugins: [
+    react(),
+    tailwindcss(),
+    visualizer.default({ // ✅ FIX: Use `.default()` with the plugin
+      open: true, // Automatically opens report in browser
+      filename: "stats.html", // Output file name
+      gzipSize: true, // Show compressed size
+      brotliSize: true, // Show brotli-compressed size
+    }),
+  ],
+});

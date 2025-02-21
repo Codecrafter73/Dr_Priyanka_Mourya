@@ -74,7 +74,7 @@ const AboutPriyanka = () => {
                             <li>Corona Warrior Award (2020)</li>
                         </ul>
 
-                        <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Contact:</strong> 7667238292</p>
+                        <p className="text-lg text-gray-600 leading-relaxed text-justify"><strong>Contact:</strong> <a href="tel:917667238292">7667238292</a></p>
                     </div>
 
                     <div className="flex justify-center">

@@ -6,7 +6,6 @@ import Button from '../../../component/Button';
 import shape1 from '../../../assets/dr-priyanka/shape1.svg'
 import shape2 from '../../../assets/dr-priyanka/shape2.svg'
 import logo from '../../../assets/bjp/bjplogo.png'
-import video from '../../../assets/bjp/bgvideo.mp4'
 import pattern from '../../../assets/pattern/pattern13.jpg'
 
 const WomenSocialLeaderShip = () => {
