@@ -112,7 +112,7 @@ const Footer = () => {
                         {/* Map Section */}
                         <div className="w-full ">
                             <h3 className="text-xl font-semibold mb-4 text-white">Find Us</h3>
-                            <div className="h-48 lg:h-64 w-full bg-gray-300">
+                            <div className="h-48  w-full bg-gray-300">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.382347894296!2d80.895727074891!3d26.795951665099665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfb042d623d8f%3A0x2f6761648c20102f!2sDr.%20Priyanka%20Maurya%20Homeopathy%20Clinic!5e0!3m2!1sen!2sin!4v1738392253515!5m2!1sen!2sin"
                                     width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy" title="Location Map"
@@ -122,8 +122,7 @@ const Footer = () => {
                     </div>
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-center">
                         <p className="text-center text-sm sm:text-base font-normal mb-2 sm:mb-0 sm:mr-4 text-white">
-                            Copyright © 2025<span className="font-semibold text-white">Dr. Priyanka Maurya</span>||All Rights Reserved ||
-                        </p>
+                            Copyright © 2025<span className="font-semibold text-white">Dr. Priyanka Maurya </span> || All Rights Reserved ||                        </p>
                         <a href="https://www.codecrafter.co.in/" target="_blank" rel="noopener noreferrer" className="flex items-center text-base font-normal text-gray-400">
                             <span className='text-base text-white'>Developed By:</span>
                             <img src={cclogo} alt="Code Crafter Web Solutions" className="w-32 sm:w-[8rem] h-auto object-contain" />
